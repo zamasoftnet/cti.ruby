@@ -1,0 +1,11 @@
+build/
+*.pdf
+out/
+.idea/
+.vscode/
+*.swp
+*.gem
+.bundle/
+Gemfile.lock
+pkg/
+test-config.json
