@@ -19,13 +19,13 @@ file:: 結果ファイル
       end
 
       def serial_write(data)
-        @out = File.open(@file, 'w') unless @out
+        @out = File.open(@file, 'wb') unless @out
         @out.write(data)
       end
 
       def finish
         unless @out
-          @out = File.open(@file, 'w')
+          @out = File.open(@file, 'wb')
           super
         end
         @out.close

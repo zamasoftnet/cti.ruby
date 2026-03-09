@@ -143,6 +143,7 @@ out:: 出力先ストリーム
 =end
       def initialize(out, &finish)
         @tempFile = Tempfile.open(['cti', '.tmp'])
+        @tempFile.binmode
         @out = out
         @finish = finish
         @frgs = []
