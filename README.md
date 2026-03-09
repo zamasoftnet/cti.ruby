@@ -14,19 +14,40 @@ http://dl.cssj.jp/docs/copper/3.2/html/3424_ctip2_ruby.html
 
 ## インストール
 
-`src/code/CTI/` ディレクトリをプロジェクトにコピーし、`$LOAD_PATH` に追加するか `require_relative` で読み込んでください。
+### Bundler を使う方法（推奨）
+
+`Gemfile` に以下を追加してください。
+
+```ruby
+gem 'copper-cti', git: 'https://github.com/zamasoftnet/cti.ruby.git'
+```
+
+その後 `bundle install` を実行します。
+
+```bash
+bundle install
+```
+
+インストール後は通常通りモジュールを使用できます。
+
+```ruby
+require 'CTI'
+```
+
+### gem コマンドを使う方法
+
+```bash
+gem install specific_install
+gem specific_install https://github.com/zamasoftnet/cti.ruby.git
+```
+
+### 手動インストール
+
+`src/code/` ディレクトリをプロジェクトにコピーし、`$LOAD_PATH` に追加してください。
 
 ```ruby
 $LOAD_PATH.unshift('/path/to/src/code')
-require 'CTI/Session'
-require 'CTI/Driver'
-```
-
-または `require_relative` を使用する場合:
-
-```ruby
-require_relative 'path/to/src/code/CTI/Session'
-require_relative 'path/to/src/code/CTI/Driver'
+require 'CTI'
 ```
 
 ## 基本的な使い方
