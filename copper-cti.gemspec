@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = 'copper-cti'
-  spec.version       = '2.1.0'
+  spec.version       = '2.1.1'
   spec.authors       = ['Zamasoft']
   spec.email         = ['info@zamasoft.jp']
   spec.summary       = 'CTI driver for Copper PDF server'

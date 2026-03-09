@@ -2,7 +2,7 @@
 
 [Copper PDF](https://copper-pdf.com/) 文書変換サーバーに接続するためのRubyドライバです。
 
-バージョン 2.1.0
+バージョン 2.1.1
 
 使用方法は付属のAPIドキュメント、サンプルプログラム、以下のオンラインマニュアルを参照してください。
 
@@ -168,6 +168,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ## 変更履歴
+
+### v2.1.1 (2026/3/9)
+- Windows/Cygwin 環境でバイナリファイルをテキストモードで書き込むバグを修正。
 
 ### v2.1.0 (2022/1/24)
 - Ruby 3に対応。FileUtilsまたはIOのcopy_streamではなくCTI::copy_streamを使用。
