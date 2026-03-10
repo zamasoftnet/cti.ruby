@@ -17,15 +17,16 @@ jobs:
         with:
           ruby-version: '3.x'
 
+      - name: Generate API docs
+        run: rdoc -N -c UTF-8 -o build/apidoc -m CTI src/code 2>/dev/null || true
+
       - name: Create dist
         run: |
           VERSION="${GITHUB_REF_NAME#v}"
           DIRNAME="cti-ruby-${VERSION}"
           STAGEDIR="build/${DIRNAME}"
           mkdir -p "${STAGEDIR}"
-          # Generate RDoc
-          rdoc -N -c UTF-8 -o "${STAGEDIR}/apidoc" -m CTI src/code 2>/dev/null || true
-          # Copy source files
+          cp -r build/apidoc "${STAGEDIR}/apidoc" 2>/dev/null || true
           cp -r src/. "${STAGEDIR}/"
           rm -rf "${STAGEDIR}/test/out"
           sed "s/@version@/${VERSION}/g" README.md > "${STAGEDIR}/README.md"
@@ -40,3 +41,9 @@ jobs:
           files: |
             build/cti-ruby-*.zip
             build/cti-ruby-*.tar.gz
+
+      - name: Deploy API docs to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/apidoc
