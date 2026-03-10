@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>class CTI::Session - RDoc Documentation</title>
+
+
+  <meta
+    name="keywords"
+    content="ruby,class,CTI::Session"
+  >
+
+    <meta
+      name="description"
+      content="class CTI::Session: Session."
+    >
+
+
+
+
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="class CTI::Session - RDoc Documentation">
+
+
+
+    <meta property="og:description" content="Session.">
+
+
+
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="class CTI::Session - RDoc Documentation">
+
+
+
+    <meta name="twitter:description" content="Session.">
+
+
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script
+  src="../js/theme-toggle.js?v=7.0.3"
+></script>
+
+<script
+  src="../js/search_navigation.js?v=7.0.3"
+  defer
+></script>
+
+<script
+  src="../js/search_data.js?v=7.0.3"
+  defer
+></script>
+
+<script
+  src="../js/search_ranker.js?v=7.0.3"
+  defer
+></script>
+
+<script
+  src="../js/search_controller.js?v=7.0.3"
+  defer
+></script>
+
+<script
+  src="../js/c_highlighter.js?v=7.0.3"
+  defer
+></script>
+
+<script
+  src="../js/aliki.js?v=7.0.3"
+  defer
+></script>
+
+<link
+  href="../css/rdoc.css?v=7.0.3"
+  rel="stylesheet"
+>
+
+
+
+
+<body role="document" class="class has-toc">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <!-- Chevron (right arrow) - used for expand/collapse -->
+  <symbol
+    id="icon-chevron"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </symbol>
+
+  <!-- File/Document - Pages section -->
+  <symbol
+    id="icon-file"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path
+      d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"
+    ></path>
+
+    <polyline points="14 2 14 8 20 8"></polyline>
+  </symbol>
+
+  <!-- Layers/Stack - Classes and Modules section -->
+  <symbol
+    id="icon-layers"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+    <polyline points="2 17 12 22 22 17"></polyline>
+    <polyline points="2 12 12 17 22 12"></polyline>
+  </symbol>
+
+  <!-- Curly braces with C - Class Methods section -->
+  <symbol
+    id="icon-class-methods"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M6 3C3.5 3 2 4.5 2 7v3c0 1.5-1 2-1 2s1 .5 1 2v5c0 2.5 1.5 4 4 4"></path>
+    <path d="M18 3c2.5 0 4 1.5 4 4v3c0 1.5 1 2 1 2s-1 .5-1 2v5c0 2.5-1.5 4-4 4"></path>
+
+    <text
+      x="12"
+      y="17"
+      text-anchor="middle"
+      font-size="13"
+      font-weight="bold"
+      fill="currentColor"
+      stroke="none"
+    >
+      C
+    </text>
+  </symbol>
+
+  <!-- Curly braces with I - Instance Methods section -->
+  <symbol
+    id="icon-instance-methods"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M6 3C3.5 3 2 4.5 2 7v3c0 1.5-1 2-1 2s1 .5 1 2v5c0 2.5 1.5 4 4 4"></path>
+    <path d="M18 3c2.5 0 4 1.5 4 4v3c0 1.5 1 2 1 2s-1 .5-1 2v5c0 2.5-1.5 4-4 4"></path>
+
+    <text
+      x="12"
+      y="17"
+      text-anchor="middle"
+      font-size="13"
+      font-weight="bold"
+      fill="currentColor"
+      stroke="none"
+    >
+      I
+    </text>
+  </symbol>
+
+  <!-- Double chevrons up - Ancestors section -->
+  <symbol
+    id="icon-ancestors"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <polyline points="17 11 12 6 7 11"></polyline>
+    <polyline points="17 18 12 13 7 18"></polyline>
+  </symbol>
+
+  <!-- User with plus - Included Modules section -->
+  <symbol
+    id="icon-includes"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+    <circle cx="8.5" cy="7" r="4"></circle>
+
+    <line
+      x1="20"
+      y1="8"
+      x2="20"
+      y2="14"
+    ></line>
+
+    <line
+      x1="23"
+      y1="11"
+      x2="17"
+      y2="11"
+    ></line>
+  </symbol>
+
+  <!-- User with check - Extended Modules section -->
+  <symbol
+    id="icon-extends"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+    <circle cx="8.5" cy="7" r="4"></circle>
+    <polyline points="17 11 19 13 23 9"></polyline>
+  </symbol>
+
+  <!-- List - Sections section -->
+  <symbol
+    id="icon-list"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <line
+      x1="8"
+      y1="6"
+      x2="21"
+      y2="6"
+    ></line>
+
+    <line
+      x1="8"
+      y1="12"
+      x2="21"
+      y2="12"
+    ></line>
+
+    <line
+      x1="8"
+      y1="18"
+      x2="21"
+      y2="18"
+    ></line>
+
+    <line
+      x1="3"
+      y1="6"
+      x2="3.01"
+      y2="6"
+    ></line>
+
+    <line
+      x1="3"
+      y1="12"
+      x2="3.01"
+      y2="12"
+    ></line>
+
+    <line
+      x1="3"
+      y1="18"
+      x2="3.01"
+      y2="18"
+    ></line>
+  </symbol>
+</svg>
+
+<header class="top-navbar">
+  <a href="../index.html" class="navbar-brand">
+    RDoc Documentation
+  </a>
+
+  <!-- Desktop search bar -->
+  <div class="navbar-search navbar-search-desktop" role="search">
+    <form action="#" method="get" accept-charset="utf-8">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results-desktop"
+             type="text" name="search" placeholder="Search (/) for a class, method..."
+             spellcheck="false" autocomplete="off"
+             title="Type to search, Up and Down to navigate, Enter to load">
+      <ul id="search-results-desktop" aria-label="Search Results"
+          aria-busy="false" aria-expanded="false"
+          aria-atomic="false" class="initially-hidden search-results"></ul>
+    </form>
+  </div>
+
+  <!-- Mobile search icon button -->
+  <button id="search-toggle" class="navbar-search-mobile" aria-label="Open search" type="button">
+    <span aria-hidden="true">🔍</span>
+  </button>
+
+  <!-- Theme toggle button -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" type="button">
+    <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
+  </button>
+</header>
+
+<!-- Search Modal (Mobile) -->
+<div id="search-modal" class="search-modal" hidden aria-modal="true" role="dialog" aria-label="Search">
+  <div class="search-modal-backdrop"></div>
+  <div class="search-modal-content">
+    <div class="search-modal-header">
+      <form class="search-modal-form" action="#" method="get" accept-charset="utf-8">
+        <span class="search-modal-icon" aria-hidden="true">🔍</span>
+        <input id="search-field-mobile" role="combobox" aria-label="Search"
+               aria-autocomplete="list" aria-controls="search-results-mobile"
+               type="text" name="search" placeholder="Search documentation"
+               spellcheck="false" autocomplete="off">
+        <button type="button" class="search-modal-close" aria-label="Close search" id="search-modal-close">
+          <span aria-hidden="true">esc</span>
+        </button>
+      </form>
+    </div>
+    <div class="search-modal-body">
+      <ul id="search-results-mobile" aria-label="Search Results"
+          aria-busy="false" aria-expanded="false"
+          aria-atomic="false" class="search-results search-modal-results initially-hidden"></ul>
+      <div class="search-modal-empty">
+        <p>No recent searches</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="navigation-toggle" role="button" tabindex="0" aria-label="Toggle sidebar" aria-expanded="true" aria-controls="navigation">
+  <span aria-hidden="true">&#9776;</span>
+</div>
+
+
+<nav id="navigation" role="navigation" hidden>
+  
+
+
+
+
+
+  
+
+  
+<div id="parent-class-section" class="nav-section">
+  <details class="nav-section-collapsible" open>
+    <summary class="nav-section-header">
+      <span class="nav-section-icon">
+        <svg><use href="#icon-ancestors"></use></svg>
+      </span>
+      <span class="nav-section-title">Ancestors</span>
+      <span class="nav-section-chevron">
+        <svg><use href="#icon-chevron"></use></svg>
+      </span>
+    </summary>
+    <ul><li>Object</li></ul>
+  </details>
+</div>
+
+
+  
+
+  
+<div id="extends-section" class="nav-section">
+  <details class="nav-section-collapsible" open>
+    <summary class="nav-section-header">
+      <span class="nav-section-icon">
+        <svg><use href="#icon-extends"></use></svg>
+      </span>
+      <span class="nav-section-title">Extended With Modules</span>
+      <span class="nav-section-chevron">
+        <svg><use href="#icon-chevron"></use></svg>
+      </span>
+    </summary>
+
+    <ul class="nav-list">
+
+
+      <li><a class="extend" href="CTIP2.html">CTI::CTIP2</a></li>
+
+
+    </ul>
+  </details>
+</div>
+
+
+  
+  <div class="nav-section">
+    <details class="nav-section-collapsible" open>
+      <summary class="nav-section-header">
+        <span class="nav-section-icon">
+          <svg><use href="#icon-class-methods"></use></svg>
+        </span>
+        <span class="nav-section-title">Class Methods</span>
+        <span class="nav-section-chevron">
+          <svg><use href="#icon-chevron"></use></svg>
+        </span>
+      </summary>
+      <ul class="nav-list" role="directory">
+
+        <li ><a href="#method-c-new">new</a></li>
+
+      </ul>
+    </details>
+  </div>
+
+
+
+  <div class="nav-section">
+    <details class="nav-section-collapsible" open>
+      <summary class="nav-section-header">
+        <span class="nav-section-icon">
+          <svg><use href="#icon-instance-methods"></use></svg>
+        </span>
+        <span class="nav-section-title">Instance Methods</span>
+        <span class="nav-section-chevron">
+          <svg><use href="#icon-chevron"></use></svg>
+        </span>
+      </summary>
+      <ul class="nav-list" role="directory">
+
+        <li ><a href="#method-i-abort">abort</a></li>
+
+        <li ><a href="#method-i-build_next">build_next</a></li>
+
+        <li ><a href="#method-i-close">close</a></li>
+
+        <li ><a href="#method-i-get_server_info">get_server_info</a></li>
+
+        <li ><a href="#method-i-join">join</a></li>
+
+        <li ><a href="#method-i-property">property</a></li>
+
+        <li ><a href="#method-i-receive_message">receive_message</a></li>
+
+        <li ><a href="#method-i-receive_progress">receive_progress</a></li>
+
+        <li ><a href="#method-i-reset">reset</a></li>
+
+        <li ><a href="#method-i-resolver">resolver</a></li>
+
+        <li ><a href="#method-i-resource">resource</a></li>
+
+        <li ><a href="#method-i-set_continuous">set_continuous</a></li>
+
+        <li ><a href="#method-i-set_output_as_directory">set_output_as_directory</a></li>
+
+        <li ><a href="#method-i-set_output_as_file">set_output_as_file</a></li>
+
+        <li ><a href="#method-i-set_output_as_stream">set_output_as_stream</a></li>
+
+        <li ><a href="#method-i-set_results">set_results</a></li>
+
+        <li ><a href="#method-i-transcode">transcode</a></li>
+
+        <li ><a href="#method-i-transcodeServer">transcodeServer</a></li>
+
+        <li ><a href="#method-i-transcode_server">transcode_server</a></li>
+
+      </ul>
+    </details>
+  </div>
+
+
+  <div id="classindex-section" class="nav-section">
+  <details class="nav-section-collapsible" open>
+    <summary class="nav-section-header">
+      <span class="nav-section-icon">
+        <svg><use href="#icon-layers"></use></svg>
+      </span>
+      <span class="nav-section-title">Classes and Modules</span>
+      <span class="nav-section-chevron">
+        <svg><use href="#icon-chevron"></use></svg>
+      </span>
+    </summary>
+
+    <ul class="link-list nav-list"><li><details open><summary><code><a href="../CTI.html">CTI</a></code></summary><ul class="link-list nav-list"><li><details><summary><code><a href="../CTI/Builder.html">Builder</a></code></summary><ul class="link-list nav-list"><li><code><a href="../CTI/Builder/FileBuilder.html">FileBuilder</a></code></li><li><code><a href="../CTI/Builder/Fragment.html">Fragment</a></code></li><li><code><a href="../CTI/Builder/NullBuilder.html">NullBuilder</a></code></li><li><code><a href="../CTI/Builder/StreamBuilder.html">StreamBuilder</a></code></li></ul></details></li><li><code><a href="../CTI/CTIP2.html">CTIP2</a></code></li><li><code><a href="../CTI/Driver.html">Driver</a></code></li><li><code><a href="../CTI/MainOut.html">MainOut</a></code></li><li><code><a href="../CTI/Resource.html">Resource</a></code></li><li><code><a href="../CTI/ResourceOut.html">ResourceOut</a></code></li><li><details><summary><code><a href="../CTI/Results.html">Results</a></code></summary><ul class="link-list nav-list"><li><code><a href="../CTI/Results/DirectoryResults.html">DirectoryResults</a></code></li><li><code><a href="../CTI/Results/SingleResult.html">SingleResult</a></code></li></ul></details></li><li><code><a href="../CTI/Session.html">Session</a></code></li></ul></details></li></ul>
+  </details>
+</div>
+
+</nav>
+
+<main role="main" aria-labelledby="class-CTI::Session">
+  
+  
+    <ol role="navigation" aria-label="Breadcrumb navigation" class="breadcrumb">
+      
+      <li>
+        
+        <a href="../CTI.html">CTI</a><span>::</span>
+        
+      </li>
+      
+      <li>
+        
+        <span>Session</span>
+        
+      </li>
+      
+    </ol>
+  
+
+  <h1 id="class-CTI::Session" class="anchor-link class">
+    class CTI::Session
+  </h1>
+
+  <section class="description">
+    <dl class="rdoc-list note-list"><dt>Version</dt>
+<dd>
+<p>$Id: <a href="../src/code/CTI/Session_rb.html">Session.rb</a> 1617 2022-01-24 07:26:44Z miyabe $</p>
+</dd></dl>
+
+<p>ドキュメント変換サーバーへの接続オブジェクトです。</p>
+
+  </section>
+
+
+  <section id="5Buntitled-5D" class="documentation-section anchor-link">
+
+
+
+
+
+
+
+
+
+
+
+
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section anchor-link">
+       <header>
+         <h3 id="public-class-methods"><a href="#public-class-methods">Public Class Methods</a></h3>
+       </header>
+
+
+      <div id="method-c-new" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-c-new" title="Link to this method">
+                <span class="method-name">new</span>
+                <span class="method-args">(io, opts)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="new-source">
+            <pre class="ruby" data-language="ruby">   <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">27</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">io</span>, <span class="ruby-identifier">opts</span>)
+<span class="line-num">28</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">reset</span>
+<span class="line-num">29</span>   <span class="ruby-ivar">@io</span> = <span class="ruby-identifier">io</span>
+<span class="line-num">30</span> 
+<span class="line-num">31</span>   <span class="ruby-identifier">io</span>.<span class="ruby-identifier">extend</span> <span class="ruby-constant">CTIP2</span>
+<span class="line-num">32</span> 
+<span class="line-num">33</span>   <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">default</span> = <span class="ruby-string">&#39;UTF-8&#39;</span>
+<span class="line-num">34</span>   <span class="ruby-ivar">@encoding</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-string">&#39;encoding&#39;</span>]
+<span class="line-num">35</span>   <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">default</span> = <span class="ruby-string">&#39;&#39;</span>
+<span class="line-num">36</span>   <span class="ruby-identifier">user</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-string">&#39;user&#39;</span>]
+<span class="line-num">37</span>   <span class="ruby-identifier">password</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-string">&#39;password&#39;</span>]
+<span class="line-num">38</span> 
+<span class="line-num">39</span>   <span class="ruby-identifier">io</span>.<span class="ruby-identifier">cti_connect</span>(<span class="ruby-ivar">@encoding</span>)
+<span class="line-num">40</span>   <span class="ruby-identifier">data</span> = <span class="ruby-node">&quot;PLAIN: #{user} #{password}\n&quot;</span>
+<span class="line-num">41</span>   <span class="ruby-identifier">io</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">data</span>)
+<span class="line-num">42</span>   <span class="ruby-identifier">res</span> = <span class="ruby-identifier">io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-value">4</span>)
+<span class="line-num">43</span>   <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Authentication failure.&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">res</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;OK \n&quot;</span>
+<span class="line-num">44</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>セッションを構築します。このメソッドを直接呼び出す必要はありません。</p>
+
+<p><a href="../CTI.html#method-i-get_session"><code>CTI#get_session</code></a> メソッドを使用してください。</p>
+<dl class="rdoc-list note-list"><dt>io</dt>
+<dd>
+<p>サーバーと通信するための IO オブジェクト</p>
+</dd><dt>opts</dt>
+<dd>
+<p>接続オプション(ハッシュ型で、‘encoding’, ‘user’, ‘password’というキーで文字コード、ユーザー名、パスワードを設定することができます。)</p>
+</dd><dt>返り値</dt>
+<dd>
+<p>サーバー情報のデータ文字列(XML)</p>
+</dd></dl>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+    </section>
+
+
+
+
+
+
+
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section anchor-link">
+       <header>
+         <h3 id="public-instance-methods"><a href="#public-instance-methods">Public Instance Methods</a></h3>
+       </header>
+
+
+      <div id="method-i-abort" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-abort" title="Link to this method">
+                <span class="method-name">abort</span>
+                <span class="method-args">(mode)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="abort-source">
+            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">326</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">abort</span>(<span class="ruby-identifier">mode</span>)
+<span class="line-num">327</span>   <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;abort: The session is already closed.&quot;</span>  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@state</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">3</span>
+<span class="line-num">328</span>   <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">req_abort</span>(<span class="ruby-identifier">mode</span>)
+<span class="line-num">329</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>変換処理の中断を要求します。</p>
+<dl class="rdoc-list note-list"><dt>mode</dt>
+<dd>
+<p>中断モード 0=生成済みのデータを出力して中断, 1=即時中断</p>
+</dd></dl>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-build_next" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-build_next" title="Link to this method">
+                <span class="method-name">build_next</span>
+                <span class="method-args">()</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="build_next-source">
+            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">375</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">build_next</span>
+<span class="line-num">376</span>   <span class="ruby-identifier">res</span> = <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">res_next</span>
+<span class="line-num">377</span>   <span class="ruby-keyword">case</span> <span class="ruby-identifier">res</span>[<span class="ruby-string">&#39;type&#39;</span>]
+<span class="line-num">378</span>   <span class="ruby-keyword">when</span> <span class="ruby-constant">CTIP2</span><span class="ruby-operator">::</span><span class="ruby-constant">RES_START_DATA</span>
+<span class="line-num">379</span>     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@builder</span>
+<span class="line-num">380</span>       <span class="ruby-ivar">@builder</span>.<span class="ruby-identifier">finish</span>
+<span class="line-num">381</span>       <span class="ruby-ivar">@builder</span>.<span class="ruby-identifier">dispose</span>
+<span class="line-num">382</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">383</span>     <span class="ruby-ivar">@builder</span> = <span class="ruby-ivar">@results</span>.<span class="ruby-identifier">next_builder</span>(<span class="ruby-identifier">res</span>)
+<span class="line-num">384</span> 
+<span class="line-num">385</span>   <span class="ruby-keyword">when</span> <span class="ruby-constant">CTIP2</span><span class="ruby-operator">::</span><span class="ruby-constant">RES_BLOCK_DATA</span>
+<span class="line-num">386</span>     <span class="ruby-ivar">@builder</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">res</span>[<span class="ruby-string">&#39;block_id&#39;</span>], <span class="ruby-identifier">res</span>[<span class="ruby-string">&#39;bytes&#39;</span>])
+<span class="line-num">387</span> 
+<span class="line-num">388</span>   <span class="ruby-keyword">when</span> <span class="ruby-constant">CTIP2</span><span class="ruby-operator">::</span><span class="ruby-constant">RES_ADD_BLOCK</span>
+<span class="line-num">389</span>     <span class="ruby-ivar">@builder</span>.<span class="ruby-identifier">add_block</span>
+<span class="line-num">390</span> 
+<span class="line-num">391</span>   <span class="ruby-keyword">when</span> <span class="ruby-constant">CTIP2</span><span class="ruby-operator">::</span><span class="ruby-constant">RES_INSERT_BLOCK</span>
+<span class="line-num">392</span>     <span class="ruby-ivar">@builder</span>.<span class="ruby-identifier">insert_block_before</span>(<span class="ruby-identifier">res</span>[<span class="ruby-string">&#39;block_id&#39;</span>])
+<span class="line-num">393</span> 
+<span class="line-num">394</span>   <span class="ruby-keyword">when</span> <span class="ruby-constant">CTIP2</span><span class="ruby-operator">::</span><span class="ruby-constant">RES_CLOSE_BLOCK</span>
+<span class="line-num">395</span>     <span class="ruby-ivar">@builder</span>.<span class="ruby-identifier">close_block</span>(<span class="ruby-identifier">res</span>[<span class="ruby-string">&#39;block_id&#39;</span>])
+<span class="line-num">396</span> 
+<span class="line-num">397</span>   <span class="ruby-keyword">when</span> <span class="ruby-constant">CTIP2</span><span class="ruby-operator">::</span><span class="ruby-constant">RES_DATA</span>
+<span class="line-num">398</span>     <span class="ruby-ivar">@builder</span>.<span class="ruby-identifier">serial_write</span>(<span class="ruby-identifier">res</span>[<span class="ruby-string">&#39;bytes&#39;</span>])
+<span class="line-num">399</span> 
+<span class="line-num">400</span>   <span class="ruby-keyword">when</span> <span class="ruby-constant">CTIP2</span><span class="ruby-operator">::</span><span class="ruby-constant">RES_MESSAGE</span>
+<span class="line-num">401</span>     <span class="ruby-ivar">@messageFunc</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">res</span>[<span class="ruby-string">&#39;code&#39;</span>], <span class="ruby-identifier">res</span>[<span class="ruby-string">&#39;message&#39;</span>], <span class="ruby-identifier">res</span>[<span class="ruby-string">&#39;args&#39;</span>]) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@messageFunc</span>
+<span class="line-num">402</span> 
+<span class="line-num">403</span>   <span class="ruby-keyword">when</span> <span class="ruby-constant">CTIP2</span><span class="ruby-operator">::</span><span class="ruby-constant">RES_MAIN_LENGTH</span>
+<span class="line-num">404</span>     <span class="ruby-ivar">@mainLength</span> = <span class="ruby-identifier">res</span>[<span class="ruby-string">&#39;length&#39;</span>]
+<span class="line-num">405</span>     <span class="ruby-ivar">@progressFunc</span>.<span class="ruby-identifier">call</span>(<span class="ruby-ivar">@mainLength</span>, <span class="ruby-ivar">@mainRead</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@progressFunc</span>
+<span class="line-num">406</span> 
+<span class="line-num">407</span>   <span class="ruby-keyword">when</span> <span class="ruby-constant">CTIP2</span><span class="ruby-operator">::</span><span class="ruby-constant">RES_MAIN_READ</span>
+<span class="line-num">408</span>     <span class="ruby-ivar">@mainRead</span> = <span class="ruby-identifier">res</span>[<span class="ruby-string">&#39;length&#39;</span>]
+<span class="line-num">409</span>     <span class="ruby-ivar">@progressFunc</span>.<span class="ruby-identifier">call</span>(<span class="ruby-ivar">@mainLength</span>, <span class="ruby-ivar">@mainRead</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@progressFunc</span>
+<span class="line-num">410</span> 
+<span class="line-num">411</span>   <span class="ruby-keyword">when</span> <span class="ruby-constant">CTIP2</span><span class="ruby-operator">::</span><span class="ruby-constant">RES_RESOURCE_REQUEST</span>
+<span class="line-num">412</span>     <span class="ruby-identifier">uri</span> = <span class="ruby-identifier">res</span>[<span class="ruby-string">&#39;uri&#39;</span>]
+<span class="line-num">413</span>     <span class="ruby-identifier">r</span> = <span class="ruby-constant">Resource</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@io</span>, <span class="ruby-identifier">uri</span>)
+<span class="line-num">414</span>     <span class="ruby-ivar">@resolverFunc</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">r</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@resolverFunc</span>
+<span class="line-num">415</span>     <span class="ruby-identifier">r</span>.<span class="ruby-identifier">finish</span>
+<span class="line-num">416</span>     <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">req_missing_resource</span>(<span class="ruby-identifier">uri</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">r</span>.<span class="ruby-identifier">missing</span>
+<span class="line-num">417</span> 
+<span class="line-num">418</span>   <span class="ruby-keyword">when</span> <span class="ruby-constant">CTIP2</span><span class="ruby-operator">::</span><span class="ruby-constant">RES_ABORT</span>
+<span class="line-num">419</span>     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@builder</span>
+<span class="line-num">420</span>       <span class="ruby-ivar">@builder</span>.<span class="ruby-identifier">finish</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">res</span>[<span class="ruby-string">&#39;mode&#39;</span>] <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+<span class="line-num">421</span>       <span class="ruby-ivar">@builder</span>.<span class="ruby-identifier">dispose</span>
+<span class="line-num">422</span>       <span class="ruby-ivar">@builder</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">423</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">424</span>     <span class="ruby-ivar">@mainLength</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">425</span>     <span class="ruby-ivar">@mainRead</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">426</span>     <span class="ruby-ivar">@state</span> = <span class="ruby-value">1</span>
+<span class="line-num">427</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="line-num">428</span> 
+<span class="line-num">429</span>   <span class="ruby-keyword">when</span> <span class="ruby-constant">CTIP2</span><span class="ruby-operator">::</span><span class="ruby-constant">RES_EOF</span>
+<span class="line-num">430</span>     <span class="ruby-ivar">@builder</span>.<span class="ruby-identifier">finish</span>
+<span class="line-num">431</span>     <span class="ruby-ivar">@builder</span>.<span class="ruby-identifier">dispose</span>
+<span class="line-num">432</span>     <span class="ruby-ivar">@builder</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">433</span>     <span class="ruby-ivar">@mainLength</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">434</span>     <span class="ruby-ivar">@mainRead</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">435</span>     <span class="ruby-ivar">@state</span> = <span class="ruby-value">1</span>
+<span class="line-num">436</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="line-num">437</span> 
+<span class="line-num">438</span>   <span class="ruby-keyword">when</span> <span class="ruby-constant">CTIP2</span><span class="ruby-operator">::</span><span class="ruby-constant">RES_NEXT</span>
+<span class="line-num">439</span>     <span class="ruby-ivar">@state</span> = <span class="ruby-value">1</span>
+<span class="line-num">440</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="line-num">441</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">442</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="line-num">443</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-close" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-close" title="Link to this method">
+                <span class="method-name">close</span>
+                <span class="method-args">()</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="close-source">
+            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">369</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">close</span>
+<span class="line-num">370</span>   <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;close: The session is already closed.&quot;</span>  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@state</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">3</span>
+<span class="line-num">371</span>   <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">req_close</span>;
+<span class="line-num">372</span>   <span class="ruby-ivar">@state</span> = <span class="ruby-value">3</span>
+<span class="line-num">373</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>セッションを閉じます。</p>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-get_server_info" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-get_server_info" title="Link to this method">
+                <span class="method-name">get_server_info</span>
+                <span class="method-args">(uri)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="get_server_info-source">
+            <pre class="ruby" data-language="ruby">   <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">55</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_server_info</span>(<span class="ruby-identifier">uri</span>)
+<span class="line-num">56</span>   <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">req_server_info</span>(<span class="ruby-identifier">uri</span>)
+<span class="line-num">57</span>   <span class="ruby-identifier">data</span> = <span class="ruby-string">&#39;&#39;</span>
+<span class="line-num">58</span>   <span class="ruby-keyword">while</span> <span class="ruby-keyword">true</span>
+<span class="line-num">59</span>     <span class="ruby-identifier">res</span> = <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">res_next</span>
+<span class="line-num">60</span>     <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">res</span>[<span class="ruby-string">&#39;type&#39;</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">CTIP2</span><span class="ruby-operator">::</span><span class="ruby-constant">RES_EOF</span>
+<span class="line-num">61</span>     <span class="ruby-identifier">data</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">res</span>[<span class="ruby-string">&#39;bytes&#39;</span>]
+<span class="line-num">62</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">63</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">data</span>
+<span class="line-num">64</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>サーバー情報を返します。詳細は<a href="http://sourceforge.jp/projects/copper/wiki/CTIP2.0%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1">オンラインのドキュメント</a>をご覧下さい。</p>
+<dl class="rdoc-list note-list"><dt>uri</dt>
+<dd>
+<p>サーバー情報のURI</p>
+</dd><dt>返り値</dt>
+<dd>
+<p>サーバー情報のデータ文字列(XML)</p>
+</dd></dl>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-join" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-join" title="Link to this method">
+                <span class="method-name">join</span>
+                <span class="method-args">()</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="join-source">
+            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">357</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">join</span>
+<span class="line-num">358</span>   <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;join: The session is already closed.&quot;</span>  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@state</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">3</span>
+<span class="line-num">359</span>   <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">req_join</span>
+<span class="line-num">360</span>   <span class="ruby-ivar">@state</span> = <span class="ruby-value">2</span>
+<span class="line-num">361</span>   <span class="ruby-keyword">while</span> <span class="ruby-identifier">build_next</span>
+<span class="line-num">362</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">363</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>結果を結合します。</p>
+
+<p>先に <a href="Session.html#method-i-set_continuous"><code>CTI::Session#set_continuous</code></a> を呼び出しておく必要があります。</p>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-property" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-property" title="Link to this method">
+                <span class="method-name">property</span>
+                <span class="method-args">(name, value)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="property-source">
+            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">214</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">property</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span>)
+<span class="line-num">215</span>   <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;property: Main content is already sent.&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@state</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">2</span>
+<span class="line-num">216</span>   <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">req_property</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span>)
+<span class="line-num">217</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>プロパティを設定します。</p>
+
+<p>セッションを作成した直後に呼び出してください。利用可能なプロパティの一覧は<a href="http://dl.cssj.jp/docs/copper/3.0/html/5100_io-properties.html">資料集</a>を参照してください。</p>
+<dl class="rdoc-list note-list"><dt>name</dt>
+<dd>
+<p>名前</p>
+</dd><dt>value</dt>
+<dd>
+<p>値</p>
+</dd></dl>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-receive_message" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-receive_message" title="Link to this method">
+                <span class="method-name">receive_message</span>
+                <span class="method-args">(&amp;messageFunc)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="receive_message-source">
+            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">139</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">receive_message</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">messageFunc</span>)
+<span class="line-num">140</span>   <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;receive_message: Main content is already sent.&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@state</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">2</span>
+<span class="line-num">141</span>   <span class="ruby-ivar">@messageFunc</span> = <span class="ruby-identifier">messageFunc</span>;
+<span class="line-num">142</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>エラーメッセージ受信のためのブロックを設定します。</p>
+
+<p><a href="Session.html#method-i-transcode"><code>CTI::Session#transcode</code></a> および <a href="Session.html#method-i-transcode_server"><code>CTI::Session#transcode_server</code></a> の前に呼び出してください。ブロックの引数は、エラーコード(int)、メッセージ(string)、付属データ(array)です。</p>
+<dl class="rdoc-list note-list"><dt>&amp;messageFunc</dt>
+<dd>
+<p>ブロック</p>
+</dd></dl>
+
+<p>例:</p>
+
+<pre class="ruby"><span class="ruby-identifier">session</span>.<span class="ruby-identifier">receive_message</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">code</span>, <span class="ruby-identifier">message</span>, <span class="ruby-identifier">args</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">printf</span>(<span class="ruby-string">&quot;%X %s\n&quot;</span>, <span class="ruby-identifier">code</span>, <span class="ruby-identifier">message</span>)
+  <span class="ruby-identifier">p</span> <span class="ruby-identifier">args</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-receive_progress" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-receive_progress" title="Link to this method">
+                <span class="method-name">receive_progress</span>
+                <span class="method-args">(&amp;progressFunc)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="receive_progress-source">
+            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">158</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">receive_progress</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">progressFunc</span>)
+<span class="line-num">159</span>   <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;receive_progress: Main content is already sent.&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@state</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">2</span>
+<span class="line-num">160</span>   <span class="ruby-ivar">@progressFunc</span> = <span class="ruby-identifier">progressFunc</span>;
+<span class="line-num">161</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>進行状況受信のためのブロックを設定します。</p>
+
+<p><a href="Session.html#method-i-transcode"><code>CTI::Session#transcode</code></a> および <a href="Session.html#method-i-transcode_server"><code>CTI::Session#transcode_server</code></a> の前に呼び出してください。ブロックの引数は、全体のバイト数(int)、読み込み済みバイト数(int)です。</p>
+<dl class="rdoc-list note-list"><dt>&amp;progressFunc</dt>
+<dd>
+<p>ブロック</p>
+</dd></dl>
+
+<p>例:</p>
+
+<pre class="ruby"><span class="ruby-identifier">session</span>.<span class="ruby-identifier">receive_progress</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">length</span>, <span class="ruby-identifier">read</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{read} / #{length}&quot;</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-reset" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-reset" title="Link to this method">
+                <span class="method-name">reset</span>
+                <span class="method-args">()</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="reset-source">
+            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">335</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">reset</span>
+<span class="line-num">336</span>   <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;reset: The session is already closed.&quot;</span>  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@state</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@state</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">3</span>
+<span class="line-num">337</span>   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@io</span>
+<span class="line-num">338</span>     <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">req_reset</span>
+<span class="line-num">339</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">340</span>   <span class="ruby-ivar">@progressFunc</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">341</span>   <span class="ruby-ivar">@messageFunc</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">342</span>   <span class="ruby-ivar">@resolverFunc</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">343</span>   <span class="ruby-ivar">@results</span> = <span class="ruby-constant">SingleResult</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">StreamBuilder</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">STDOUT</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">length</span><span class="ruby-operator">|</span>
+<span class="line-num">344</span>     <span class="ruby-identifier">print</span> <span class="ruby-node">&quot;Content-Length: #{length}\r\n\r\n&quot;</span>
+<span class="line-num">345</span>   <span class="ruby-keyword">end</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">opts</span><span class="ruby-operator">|</span>
+<span class="line-num">346</span>     <span class="ruby-identifier">print</span> <span class="ruby-node">&quot;Content-Type: #{opts[&#39;mime_type&#39;]}\r\n&quot;</span>
+<span class="line-num">347</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">348</span>   <span class="ruby-ivar">@state</span> = <span class="ruby-value">1</span>
+<span class="line-num">349</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>全ての状態をリセットします。</p>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-resolver" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-resolver" title="Link to this method">
+                <span class="method-name">resolver</span>
+                <span class="method-args">(&amp;resolverFunc)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="resolver-source">
+            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">184</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">resolver</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">resolverFunc</span>)
+<span class="line-num">185</span>   <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;resolver: Main content is already sent.&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@state</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">2</span>
+<span class="line-num">186</span>   <span class="ruby-ivar">@resolverFunc</span> = <span class="ruby-identifier">resolverFunc</span>;
+<span class="line-num">187</span>   <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">req_client_resource</span>(<span class="ruby-identifier">resolverFunc</span> <span class="ruby-operator">?</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>)
+<span class="line-num">188</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>リソース解決のためのブロックを設定します。</p>
+
+<p><a href="Session.html#method-i-transcode"><code>CTI::Session#transcode</code></a> および <a href="Session.html#method-i-transcode_server"><code>CTI::Session#transcode_server</code></a> の前に呼び出してください。ブロックの引数は、URI(string)、リソース出力クラス( <a href="Resource.html"><code>CTI::Resource</code></a> )です。</p>
+<dl class="rdoc-list note-list"><dt>&amp;resolverFunc</dt>
+<dd>
+<p>ブロック</p>
+</dd></dl>
+
+<p>URIに対応するリソースが見つかった場合、 <a href="Resource.html#method-i-found"><code>CTI::Resource#found</code></a> メソッドを呼び出してください。foundの呼び出しがない場合、リソースは見つからなかったものと扱われます。</p>
+
+<p>例:</p>
+
+<pre class="ruby"><span class="ruby-identifier">session</span>.<span class="ruby-identifier">resolver</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">uri</span>, <span class="ruby-identifier">r</span><span class="ruby-operator">|</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">uri</span>)
+    <span class="ruby-identifier">r</span>.<span class="ruby-identifier">found</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">out</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">copy_stream</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">uri</span>), <span class="ruby-identifier">out</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-resource" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-resource" title="Link to this method">
+                <span class="method-name">resource</span>
+                <span class="method-args">(uri, opts = {}, &amp;block)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="resource-source">
+            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">235</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">resource</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">opts</span> = {}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="line-num">236</span>   <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;resource: Main content is already sent.&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@state</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">2</span>
+<span class="line-num">237</span>   <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">default</span> = <span class="ruby-string">&#39;text/css&#39;</span>
+<span class="line-num">238</span>   <span class="ruby-identifier">mime_type</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-string">&#39;mime_type&#39;</span>]
+<span class="line-num">239</span>   <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">default</span> = <span class="ruby-string">&#39;&#39;</span>
+<span class="line-num">240</span>   <span class="ruby-identifier">encoding</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-string">&#39;encoding&#39;</span>]
+<span class="line-num">241</span>   <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">default</span> = <span class="ruby-value">-1</span>
+<span class="line-num">242</span>   <span class="ruby-identifier">length</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-string">&#39;length&#39;</span>]
+<span class="line-num">243</span>   <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">req_resource</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">mime_type</span>, <span class="ruby-identifier">encoding</span>, <span class="ruby-identifier">length</span>)
+<span class="line-num">244</span> 
+<span class="line-num">245</span>   <span class="ruby-identifier">out</span> = <span class="ruby-constant">ResourceOut</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@io</span>)
+<span class="line-num">246</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">block</span>
+<span class="line-num">247</span>     <span class="ruby-keyword">begin</span>
+<span class="line-num">248</span>       <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">out</span>)
+<span class="line-num">249</span>     <span class="ruby-keyword">ensure</span>
+<span class="line-num">250</span>       <span class="ruby-identifier">out</span>.<span class="ruby-identifier">close</span>
+<span class="line-num">251</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">252</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">253</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">out</span>
+<span class="line-num">254</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">255</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>リソース送信処理を行います。CTI::Session#transcode および <a href="Session.html#method-i-transcode_server"><code>CTI::Session#transcode_server</code></a> の前に呼び出してください。</p>
+<dl class="rdoc-list note-list"><dt>uri</dt>
+<dd>
+<p>仮想URI</p>
+</dd><dt>opts</dt>
+<dd>
+<p>リソースオプション(ハッシュ型で、‘mime_type’, ‘encoding’, ‘length’というキーでデータ型、文字コード、長さを設定することができます。)</p>
+</dd><dt>&amp;block</dt>
+<dd>
+<p>リソースを送信するためのブロックで、引数としてリソースの出力先ストリームが渡されます。</p>
+</dd><dt>戻り値</dt>
+<dd>
+<p>&amp;blockがない場合はリソースの出力先ストリームが返されます。</p>
+</dd></dl>
+
+<p>例:</p>
+
+<pre class="ruby"><span class="ruby-identifier">session</span>.<span class="ruby-identifier">resource</span>(<span class="ruby-string">&#39;test.css&#39;</span>, {<span class="ruby-string">&#39;mime_type&#39;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;test/css&#39;</span>}) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">out</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">copy_stream</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&#39;data/test.css&#39;</span>), <span class="ruby-identifier">out</span>)
+<span class="ruby-keyword">end</span>
+</pre>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-set_continuous" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-set_continuous" title="Link to this method">
+                <span class="method-name">set_continuous</span>
+                <span class="method-args">(continuous)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="set_continuous-source">
+            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">199</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_continuous</span>(<span class="ruby-identifier">continuous</span>)
+<span class="line-num">200</span>   <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;set_continuous: Main content is already sent.&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@state</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">2</span>
+<span class="line-num">201</span>   <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">req_continuous</span>(<span class="ruby-identifier">continuous</span> <span class="ruby-operator">?</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>)
+<span class="line-num">202</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>複数の結果を結合するモードを切り替えます。モードが有効な場合、 <a href="Session.html#method-i-join"><code>CTI::Session#join</code></a> の呼び出しで複数の結果を結合して返します。</p>
+
+<p><a href="Session.html#method-i-transcode"><code>CTI::Session#transcode</code></a> および <a href="Session.html#method-i-transcode_server"><code>CTI::Session#transcode_server</code></a> の前に呼び出してください。</p>
+<dl class="rdoc-list note-list"><dt>continuous</dt>
+<dd>
+<p>有効にするにはtrue</p>
+</dd></dl>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-set_output_as_directory" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-set_output_as_directory" title="Link to this method">
+                <span class="method-name">set_output_as_directory</span>
+                <span class="method-args">(dir, prefix = &#39;&#39;, suffix = &#39;&#39;)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="set_output_as_directory-source">
+            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">107</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_output_as_directory</span>(<span class="ruby-identifier">dir</span>, <span class="ruby-identifier">prefix</span> = <span class="ruby-string">&#39;&#39;</span>, <span class="ruby-identifier">suffix</span> = <span class="ruby-string">&#39;&#39;</span>)
+<span class="line-num">108</span>   <span class="ruby-identifier">set_results</span>(<span class="ruby-constant">DirectoryResults</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dir</span>, <span class="ruby-identifier">prefix</span>, <span class="ruby-identifier">suffix</span>))
+<span class="line-num">109</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>変換結果の出力先ディレクトリ名を指定します。</p>
+
+<p><a href="Session.html#method-i-set_results"><code>CTI::Session#set_results</code></a> の簡易版です。こちらは、複数の結果をファイルとして出力するディレクトリ名を直接設定することができます。ファイル名は prefix ページ番号 suffix をつなげたものです。</p>
+<dl class="rdoc-list note-list"><dt>dir</dt>
+<dd>
+<p>出力先ディレクトリ名</p>
+</dd><dt>prefix</dt>
+<dd>
+<p>出力するファイルの名前の前に付ける文字列</p>
+</dd><dt>suffix</dt>
+<dd>
+<p>出力するファイルの名前の後に付ける文字列</p>
+</dd></dl>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-set_output_as_file" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-set_output_as_file" title="Link to this method">
+                <span class="method-name">set_output_as_file</span>
+                <span class="method-args">(file)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="set_output_as_file-source">
+            <pre class="ruby" data-language="ruby">   <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">91</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_output_as_file</span>(<span class="ruby-identifier">file</span>)
+<span class="line-num">92</span>   <span class="ruby-identifier">set_results</span>(<span class="ruby-constant">SingleResult</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">FileBuilder</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">file</span>)))
+<span class="line-num">93</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>変換結果の出力先ファイル名を指定します。</p>
+
+<p><a href="Session.html#method-i-set_results"><code>CTI::Session#set_results</code></a>　の簡易版です。こちらは、１つだけ結果を出力するファイル名を直接設定することができます。</p>
+<dl class="rdoc-list note-list"><dt>file</dt>
+<dd>
+<p>出力先ファイル名</p>
+</dd></dl>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-set_output_as_stream" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-set_output_as_stream" title="Link to this method">
+                <span class="method-name">set_output_as_stream</span>
+                <span class="method-args">(out)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="set_output_as_stream-source">
+            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">120</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_output_as_stream</span>(<span class="ruby-identifier">out</span>)
+<span class="line-num">121</span>   <span class="ruby-identifier">set_results</span>(<span class="ruby-constant">SingleResult</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">StreamBuilder</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">out</span>)))
+<span class="line-num">122</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>変換結果の出力先リソースを指定します。</p>
+
+<p><a href="Session.html#method-i-set_results"><code>CTI::Session#set_results</code></a> の簡易版です。こちらは、１つだけの結果出力先を直接設定することができます。</p>
+<dl class="rdoc-list note-list"><dt>out</dt>
+<dd>
+<p>出力先 IO オブジェクト</p>
+</dd></dl>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-set_results" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-set_results" title="Link to this method">
+                <span class="method-name">set_results</span>
+                <span class="method-args">(results)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="set_results-source">
+            <pre class="ruby" data-language="ruby">   <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">77</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_results</span>(<span class="ruby-identifier">results</span>)
+<span class="line-num">78</span>   <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;set_results: Main content is already sent.&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@state</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">2</span>
+<span class="line-num">79</span>   <span class="ruby-ivar">@results</span> = <span class="ruby-identifier">results</span>
+<span class="line-num">80</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>変換結果の出力先を指定します。</p>
+
+<p><a href="Session.html#method-i-transcode"><code>CTI::Session#transcode</code></a> および <a href="Session.html#method-i-transcode_server"><code>CTI::Session#transcode_server</code></a> の前に呼び出してください。この関数を呼び出さないデフォルトの状態では、出力先は標準出力( STDOUT )になります。</p>
+
+<p>また、デフォルトの状態では、自動的にContent-Type, Content-Lengthヘッダが送出されます。</p>
+<dl class="rdoc-list note-list"><dt>results</dt>
+<dd>
+<p>出力先の <a href="Results.html"><code>CTI::Results</code></a> オブジェクト</p>
+</dd></dl>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-transcode" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-transcode" title="Link to this method">
+                <span class="method-name">transcode</span>
+                <span class="method-args">(uri = &#39;.&#39;, opts = {}, &amp;block)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="transcode-source">
+            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">272</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">transcode</span>(<span class="ruby-identifier">uri</span> = <span class="ruby-string">&#39;.&#39;</span>, <span class="ruby-identifier">opts</span> = {}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="line-num">273</span>   <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;transcode: Main content is already sent.&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@state</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">2</span>
+<span class="line-num">274</span>   <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">default</span> = <span class="ruby-string">&#39;text/css&#39;</span>
+<span class="line-num">275</span>   <span class="ruby-identifier">mime_type</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-string">&#39;mime_type&#39;</span>]
+<span class="line-num">276</span>   <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">default</span> = <span class="ruby-string">&#39;&#39;</span>
+<span class="line-num">277</span>   <span class="ruby-identifier">encoding</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-string">&#39;encoding&#39;</span>]
+<span class="line-num">278</span>   <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">default</span> = <span class="ruby-value">-1</span>
+<span class="line-num">279</span>   <span class="ruby-identifier">length</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-string">&#39;length&#39;</span>]
+<span class="line-num">280</span>   <span class="ruby-identifier">state</span> = <span class="ruby-value">2</span>
+<span class="line-num">281</span>   <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">req_start_main</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">mime_type</span>, <span class="ruby-identifier">encoding</span>, <span class="ruby-identifier">length</span>)
+<span class="line-num">282</span> 
+<span class="line-num">283</span>   <span class="ruby-identifier">out</span> = <span class="ruby-constant">MainOut</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@io</span>, <span class="ruby-keyword">self</span>)
+<span class="line-num">284</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">block</span>
+<span class="line-num">285</span>     <span class="ruby-keyword">begin</span>
+<span class="line-num">286</span>       <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">out</span>)
+<span class="line-num">287</span>     <span class="ruby-keyword">ensure</span>
+<span class="line-num">288</span>       <span class="ruby-identifier">out</span>.<span class="ruby-identifier">close</span>
+<span class="line-num">289</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">290</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">291</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">out</span>
+<span class="line-num">292</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">293</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>変換対象の文書リソースを送信し、変換処理を行います。</p>
+<dl class="rdoc-list note-list"><dt>uri</dt>
+<dd>
+<p>仮想URI</p>
+</dd><dt>opts</dt>
+<dd>
+<p>リソースオプション(ハッシュ型で、‘mime_type’, ‘encoding’, ‘length’というキーでデータ型、文字コード、長さを設定することができます。)</p>
+</dd><dt>&amp;block</dt>
+<dd>
+<p>リソースを送信するためのブロックで、引数としてリソースの出力先ストリームが渡されます。</p>
+</dd><dt>戻り値</dt>
+<dd>
+<p>&amp;blockがない場合はリソースの出力先ストリームが返されます。</p>
+</dd></dl>
+
+<p>例:</p>
+
+<pre class="ruby"><span class="ruby-identifier">session</span>.<span class="ruby-identifier">transcode</span>(<span class="ruby-string">&#39;.&#39;</span>, {<span class="ruby-string">&#39;mime_type&#39;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;text/html&#39;</span>}) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">out</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">copy_stream</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&#39;data/test.html&#39;</span>), <span class="ruby-identifier">out</span>)
+<span class="ruby-keyword">end</span>
+</pre>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-transcodeServer" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-transcodeServer" title="Link to this method">
+                <span class="method-name">transcodeServer</span>
+                <span class="method-args">(uri)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="transcodeServer-source">
+            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">316</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">transcodeServer</span>(<span class="ruby-identifier">uri</span>)
+<span class="line-num">317</span>   <span class="ruby-identifier">transcode_server</span>(<span class="ruby-identifier">uri</span>)
+<span class="line-num">318</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p><strong>DEPRECATED:</strong>　{#transcode_server} を使って下さい。</p>
+
+<p>サーバー側リソースを変換します。</p>
+<dl class="rdoc-list note-list"><dt>uri</dt>
+<dd>
+<p>URI</p>
+</dd></dl>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-transcode_server" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-transcode_server" title="Link to this method">
+                <span class="method-name">transcode_server</span>
+                <span class="method-args">(uri)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="transcode_server-source">
+            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/Session.rb</span>
+<span class="line-num">301</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">transcode_server</span>(<span class="ruby-identifier">uri</span>)
+<span class="line-num">302</span>   <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;transcode_server: Main content is already sent.&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@state</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">2</span>
+<span class="line-num">303</span>   <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">req_server_main</span>(<span class="ruby-identifier">uri</span>)
+<span class="line-num">304</span>   <span class="ruby-ivar">@state</span> = <span class="ruby-value">2</span>
+<span class="line-num">305</span>   <span class="ruby-keyword">while</span> <span class="ruby-identifier">build_next</span>
+<span class="line-num">306</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">307</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>サーバー側リソースを変換します。</p>
+<dl class="rdoc-list note-list"><dt>uri</dt>
+<dd>
+<p>URI</p>
+</dd></dl>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+    </section>
+
+
+
+
+  </section>
+
+</main>
+
+<aside class="table-of-contents" role="complementary" aria-label="Table of Contents">
+  <div class="toc-sticky">
+    <h3 class="toc-heading">On This Page</h3>
+    <nav class="toc-nav" id="toc-nav" aria-label="Page sections">
+      <!-- Generated by JavaScript based on page headings -->
+    </nav>
+  </div>
+</aside>
+
+
+<footer class="site-footer">
+  
+
+  <div class="footer-bottom">
+    <p>
+      Generated by <a href="https://ruby.github.io/rdoc/">RDoc 7.0.3</a>
+      using the Aliki theme by <a href="http://st0012.dev">Stan Lo</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+

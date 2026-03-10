@@ -5,12 +5,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>RDoc Documentation</title>
+<title>module CTI - RDoc Documentation</title>
 
 
-  <meta name="keywords" content="ruby,documentation,RDoc Documentation">
+  <meta
+    name="keywords"
+    content="ruby,module,CTI"
+  >
 
-    <meta name="description" content="Documentation for RDoc Documentation">
+    <meta
+      name="description"
+      content="module CTI: CTI. miyabe $ RubyでCopper PDF 2."
+    >
 
 
 
@@ -18,26 +24,24 @@
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="RDoc Documentation">
+<meta property="og:title" content="module CTI - RDoc Documentation">
 
 
-  <meta
-    property="og:description"
-    content="API documentation for RDoc Documentation - Browse classes, modules, and methods"
-  >
+
+    <meta property="og:description" content="CTI. miyabe $ RubyでCopper PDF 2.">
+
 
 
 
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RDoc Documentation">
+<meta name="twitter:title" content="module CTI - RDoc Documentation">
 
 
-  <meta
-    name="twitter:description"
-    content="API documentation for RDoc Documentation - Browse classes, modules, and methods"
-  >
+
+    <meta name="twitter:description" content="CTI. miyabe $ RubyでCopper PDF 2.">
+
 
 
 <script type="text/javascript">
@@ -87,7 +91,7 @@
 
 
 
-<body role="document" class="file has-toc">
+<body role="document" class="module has-toc">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <!-- Chevron (right arrow) - used for expand/collapse -->
   <symbol
@@ -366,6 +370,41 @@
 
 
 
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="nav-section">
+    <details class="nav-section-collapsible" open>
+      <summary class="nav-section-header">
+        <span class="nav-section-icon">
+          <svg><use href="#icon-instance-methods"></use></svg>
+        </span>
+        <span class="nav-section-title">Instance Methods</span>
+        <span class="nav-section-chevron">
+          <svg><use href="#icon-chevron"></use></svg>
+        </span>
+      </summary>
+      <ul class="nav-list" role="directory">
+
+        <li ><a href="#method-i-copy_stream">copy_stream</a></li>
+
+        <li ><a href="#method-i-get_driver">get_driver</a></li>
+
+        <li ><a href="#method-i-get_session">get_session</a></li>
+
+      </ul>
+    </details>
+  </div>
+
+
   <div id="classindex-section" class="nav-section">
   <details class="nav-section-collapsible" open>
     <summary class="nav-section-header">
@@ -384,9 +423,214 @@
 
 </nav>
 
-<main role="main">
+<main role="main" aria-labelledby="module-CTI">
+  
+  
 
-  <p>This is the API documentation for RDoc Documentation.</p>
+  <h1 id="module-CTI" class="anchor-link module">
+    module CTI
+  </h1>
+
+  <section class="description">
+    
+<h1 id="module-CTI-label-CTI+driver+for+Ruby"><a href="#module-CTI-label-CTI+driver+for+Ruby"><a href="CTI.html"><code>CTI</code></a> driver for Ruby</a></h1>
+<dl class="rdoc-list note-list"><dt>Version</dt>
+<dd>
+<p>$Id: <a href="src/code/CTI_rb.html">CTI.rb</a> 1617 2022-01-24 07:26:44Z miyabe $</p>
+</dd></dl>
+
+<p>RubyでCopper PDF 2.1以降にアクセスするためのドライバです。以下のドキュメントを参照してください。</p>
+
+<p><a href="http://dl.cssj.jp/docs/copper/3.1/html/3424_ctip2_ruby.html">dl.cssj.jp/docs/copper/3.1/html/3424_ctip2_ruby.html</a></p>
+
+  </section>
+
+
+  <section id="5Buntitled-5D" class="documentation-section anchor-link">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section anchor-link">
+       <header>
+         <h3 id="public-instance-methods"><a href="#public-instance-methods">Public Instance Methods</a></h3>
+       </header>
+
+
+      <div id="method-i-copy_stream" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-copy_stream" title="Link to this method">
+                <span class="method-name">copy_stream</span>
+                <span class="method-args">(inp, out)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="copy_stream-source">
+            <pre class="ruby" data-language="ruby">   <span class="ruby-comment"># File src/code/CTI.rb</span>
+<span class="line-num">46</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">copy_stream</span>(<span class="ruby-identifier">inp</span>, <span class="ruby-identifier">out</span>)
+<span class="line-num">47</span>   <span class="ruby-identifier">read</span> = <span class="ruby-value">0</span>;
+<span class="line-num">48</span>   <span class="ruby-keyword">while</span> <span class="ruby-identifier">buff</span> = <span class="ruby-identifier">inp</span>.<span class="ruby-identifier">read</span>(<span class="ruby-value">16</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span>)
+<span class="line-num">49</span>     <span class="ruby-identifier">read</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">buff</span>.<span class="ruby-identifier">length</span>
+<span class="line-num">50</span>         <span class="ruby-identifier">out</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">buff</span>)
+<span class="line-num">51</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">52</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>指定された inp から out へコピーします。コピーしたバイト数を返します。inp には read メソッド、out には write メソッドが必要です。仕様が変わってしまったRubyのFileUtils::copy_stream, IO::copy_streamに代わるものです。</p>
+<dl class="rdoc-list note-list"><dt>inp</dt>
+<dd>
+<p>転送元</p>
+</dd><dt>out</dt>
+<dd>
+<p>転送先</p>
+</dd></dl>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-get_driver" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-get_driver" title="Link to this method">
+                <span class="method-name">get_driver</span>
+                <span class="method-args">(uri)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="get_driver-source">
+            <pre class="ruby" data-language="ruby">   <span class="ruby-comment"># File src/code/CTI.rb</span>
+<span class="line-num">21</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_driver</span>(<span class="ruby-identifier">uri</span>)
+<span class="line-num">22</span>   <span class="ruby-keyword">return</span> <span class="ruby-constant">Driver</span>.<span class="ruby-identifier">new</span>
+<span class="line-num">23</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>指定されたURIに接続するためのドライバを返します。</p>
+<dl class="rdoc-list note-list"><dt>uri</dt>
+<dd>
+<p>接続先アドレス</p>
+</dd><dt>返り値</dt>
+<dd>
+<p><a href="CTI/Driver.html"><code>CTI::Driver</code></a> オブジェクト</p>
+</dd></dl>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+      <div id="method-i-get_session" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-get_session" title="Link to this method">
+                <span class="method-name">get_session</span>
+                <span class="method-args">(uri, options = {}, &amp;block)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="get_session-source">
+            <pre class="ruby" data-language="ruby">   <span class="ruby-comment"># File src/code/CTI.rb</span>
+<span class="line-num">33</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_session</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">options</span> = {}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="line-num">34</span>   <span class="ruby-identifier">get_driver</span>(<span class="ruby-identifier">uri</span>).<span class="ruby-identifier">get_session</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">options</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="line-num">35</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>指定されたURIに接続し、セッションを返します。</p>
+<dl class="rdoc-list note-list"><dt>uri</dt>
+<dd>
+<p>接続先アドレス</p>
+</dd><dt>options</dt>
+<dd>
+<p>接続オプション</p>
+</dd><dt>返り値</dt>
+<dd>
+<p><a href="CTI/Session.html"><code>CTI::Session</code></a> オブジェクト</p>
+</dd></dl>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+    </section>
+
+
+
+
+  </section>
 
 </main>
 
