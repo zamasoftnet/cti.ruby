@@ -8,11 +8,11 @@ module CTIDriverTests
 
   DATA_DIR = File.expand_path(File.join(__dir__, 'data'))
   OUT_DIR = File.expand_path(File.join(__dir__, 'out'))
-  HOST = ENV.fetch('CTI_TEST_HOST', 'localhost')
+  HOST = ENV.fetch('CTI_TEST_HOST', 'cti.li')
   PORT = (ENV['CTI_TEST_PORT'] || '8099').to_i
   USER = ENV.fetch('CTI_TEST_USER', 'user')
   PASSWORD = ENV.fetch('CTI_TEST_PASSWORD', 'kappa')
-  URI = ENV.fetch('CTI_SERVER_URI', "ctip://#{HOST}:#{PORT}/")
+  URI = ENV.fetch('CTI_SERVER_URI', 'ctip://cti.li/')
 
   def self.server_available?
     uri = URI.dup
@@ -126,6 +126,18 @@ class TestCTIDriver < Minitest::Test
     image_files = Dir.glob(File.join(output_dir, '*.jpg'))
     assert image_files.length.positive?, '出力ディレクトリにJPEGファイルが生成される'
     assert File.size(image_files.first) > 0, '出力JPEGのサイズが0でない'
+  end
+
+  def test_property_setting
+    output_file = File.join(CTIDriverTests::OUT_DIR, 'ruby-property.pdf')
+    FileUtils.rm_f(output_file)
+
+    with_session do |session|
+      session.property('output.pdf.version', '1.5')
+      transcode_html(session, output_file)
+    end
+
+    assert_pdf(output_file)
   end
 
   def test_progress_callback

@@ -1,0 +1,42 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '3.x'
+
+      - name: Create dist
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          DIRNAME="cti-ruby-${VERSION}"
+          STAGEDIR="build/${DIRNAME}"
+          mkdir -p "${STAGEDIR}"
+          # Generate RDoc
+          rdoc -N -c UTF-8 -o "${STAGEDIR}/apidoc" -m CTI src/code 2>/dev/null || true
+          # Copy source files
+          cp -r src/. "${STAGEDIR}/"
+          rm -rf "${STAGEDIR}/test/out"
+          sed "s/@version@/${VERSION}/g" README.md > "${STAGEDIR}/README.md"
+          # Create archives
+          cd build
+          zip -r "${DIRNAME}.zip" "${DIRNAME}"
+          tar czf "${DIRNAME}.tar.gz" "${DIRNAME}"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            build/cti-ruby-*.zip
+            build/cti-ruby-*.tar.gz
