@@ -8,6 +8,10 @@
 
 http://dl.cssj.jp/docs/copper/3.2/html/3424_ctip2_ruby.html
 
+## API ドキュメント
+
+- **オンライン (RDoc)**: https://zamasoftnet.github.io/cti.ruby/
+
 ## 動作要件
 
 - Ruby 1.8.7以降
