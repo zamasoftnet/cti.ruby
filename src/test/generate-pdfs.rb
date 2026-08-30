@@ -1,12 +1,13 @@
 #!/usr/bin/ruby
 require 'CTI'
+require 'fileutils'
 include CTI
 
 SERVER_URI = 'ctip://cti.li/'
 SOURCE_URI = 'http://cti.li/'
-OUTPUT_DIR = File.expand_path('../../../test-output', __dir__)
+OUTPUT_DIR = File.expand_path('../../build/test-output', __dir__)
 
-Dir.mkdir(OUTPUT_DIR) unless Dir.exist?(OUTPUT_DIR)
+FileUtils.mkdir_p(OUTPUT_DIR)
 
 def with_session(filename, &setup)
   session = get_session(SERVER_URI, 'user' => 'user', 'password' => 'kappa')

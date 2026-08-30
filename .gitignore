@@ -9,3 +9,6 @@ out/
 Gemfile.lock
 pkg/
 test-config.json
+# AIエージェント用ローカルガイド（git管理外）
+AGENTS.md
+CLAUDE.md
