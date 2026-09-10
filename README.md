@@ -2,7 +2,7 @@
 
 [Copper PDF](https://copper-pdf.com/) 文書変換サーバーに接続するためのRubyドライバです。
 
-バージョン 2.1.1
+バージョン 2.2.0
 
 使用方法は付属のAPIドキュメント、サンプルプログラム、以下のオンラインマニュアルを参照してください。
 
@@ -172,6 +172,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ## 変更履歴
+
+### v2.2.0 (2026/9/10)
+- **`ctips:` が使えるようになりました。**従来は接続の途中で
+  `undefined method 'nonblock='` が起きて必ず失敗していました。
+- **サーバー証明書を検証し、SNI を送るようにしました。**従来は
+  検証を一切しておらず、TLS を張っても相手が誰かを確かめていませんでした。
 
 ### v2.1.1 (2026/3/9)
 - Windows/Cygwin 環境でバイナリファイルをテキストモードで書き込むバグを修正。
