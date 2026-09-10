@@ -39,10 +39,20 @@ options:: 接続オプション
       
       io = TCPSocket.open(host, port)
       if ssl
-        # SSLを使う場合
+        # TLSを使う場合
+        #
+        # **証明書を検証し、SNIを送る。**素の SSLSocket.new(io) は
+        # 検証を一切しない(VERIFY_NONE)ので、TLSにしても相手が誰かを
+        # 確かめないまま話すことになる。SNIも送らないため、名前で証明書を
+        # 選ぶ中継(Traefik など)からは既定の自己署名証明書が返ってくる。
         require 'openssl'
-        io = OpenSSL::SSL::SSLSocket.new(io)
+        ctx = OpenSSL::SSL::SSLContext.new
+        ctx.set_params  # 既定のCAと VERIFY_PEER を入れる
+        io = OpenSSL::SSL::SSLSocket.new(io, ctx)
+        io.hostname = host  # SNI
+        io.sync_close = true
         io.connect
+        io.post_connection_check(host)  # 証明書の名前がホストと一致するか
       end
       session = Session.new(io, options)
       if block

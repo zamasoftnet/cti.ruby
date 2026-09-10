@@ -478,7 +478,10 @@ mode:: 中断モード 0=生成済みのデータを出力して中断, 1=即時
     def write(str)
       e = str.encoding;
       str.force_encoding(Encoding::ASCII_8BIT)
-      bio = @io.respond_to?('write_nonblock')
+      # SSLSocket は write_nonblock を持つが nonblock= を持たない。
+      # 両方あるときだけ非ブロック書き込みを使う(2026-09-10。
+      # ctips:// で `undefined method 'nonblock='` になっていた)
+      bio = @io.respond_to?('write_nonblock') && @io.respond_to?('nonblock=')
       while str.bytesize > 0
         data = str.slice!(0, CTIP2::CTI_BUFFER_SIZE)
         packet = [data.bytesize + 1, CTIP2::REQ_DATA].pack('NC') + data
