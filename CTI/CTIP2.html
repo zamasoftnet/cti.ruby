@@ -3,45 +3,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <title>module CTI::CTIP2 - RDoc Documentation</title>
 
+  <meta name="keywords" content="ruby,module,CTI::CTIP2">
 
-  <meta
-    name="keywords"
-    content="ruby,module,CTI::CTIP2"
-  >
-
-    <meta
-      name="description"
-      content="module CTI::CTIP2: CTIP2."
-    >
-
-
-
-
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="module CTI::CTIP2 - RDoc Documentation">
-
-
-
-    <meta property="og:description" content="CTIP2.">
-
-
-
-
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="module CTI::CTIP2 - RDoc Documentation">
-
-
-
-    <meta name="twitter:description" content="CTIP2.">
-
+    <meta name="description" content="module CTI::CTIP2: CTIP2.">
 
 
 <script type="text/javascript">
@@ -49,428 +17,106 @@
   var index_rel_prefix = "../";
 </script>
 
-<script
-  src="../js/theme-toggle.js?v=7.0.3"
-></script>
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
 
-<script
-  src="../js/search_navigation.js?v=7.0.3"
-  defer
-></script>
-
-<script
-  src="../js/search_data.js?v=7.0.3"
-  defer
-></script>
-
-<script
-  src="../js/search_ranker.js?v=7.0.3"
-  defer
-></script>
-
-<script
-  src="../js/search_controller.js?v=7.0.3"
-  defer
-></script>
-
-<script
-  src="../js/c_highlighter.js?v=7.0.3"
-  defer
-></script>
-
-<script
-  src="../js/aliki.js?v=7.0.3"
-  defer
-></script>
-
-<link
-  href="../css/rdoc.css?v=7.0.3"
-  rel="stylesheet"
->
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
 
 
-
-
-<body role="document" class="module has-toc">
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <!-- Chevron (right arrow) - used for expand/collapse -->
-  <symbol
-    id="icon-chevron"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <polyline points="9 18 15 12 9 6"></polyline>
-  </symbol>
-
-  <!-- File/Document - Pages section -->
-  <symbol
-    id="icon-file"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path
-      d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"
-    ></path>
-
-    <polyline points="14 2 14 8 20 8"></polyline>
-  </symbol>
-
-  <!-- Layers/Stack - Classes and Modules section -->
-  <symbol
-    id="icon-layers"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-    <polyline points="2 17 12 22 22 17"></polyline>
-    <polyline points="2 12 12 17 22 12"></polyline>
-  </symbol>
-
-  <!-- Curly braces with C - Class Methods section -->
-  <symbol
-    id="icon-class-methods"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path d="M6 3C3.5 3 2 4.5 2 7v3c0 1.5-1 2-1 2s1 .5 1 2v5c0 2.5 1.5 4 4 4"></path>
-    <path d="M18 3c2.5 0 4 1.5 4 4v3c0 1.5 1 2 1 2s-1 .5-1 2v5c0 2.5-1.5 4-4 4"></path>
-
-    <text
-      x="12"
-      y="17"
-      text-anchor="middle"
-      font-size="13"
-      font-weight="bold"
-      fill="currentColor"
-      stroke="none"
-    >
-      C
-    </text>
-  </symbol>
-
-  <!-- Curly braces with I - Instance Methods section -->
-  <symbol
-    id="icon-instance-methods"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path d="M6 3C3.5 3 2 4.5 2 7v3c0 1.5-1 2-1 2s1 .5 1 2v5c0 2.5 1.5 4 4 4"></path>
-    <path d="M18 3c2.5 0 4 1.5 4 4v3c0 1.5 1 2 1 2s-1 .5-1 2v5c0 2.5-1.5 4-4 4"></path>
-
-    <text
-      x="12"
-      y="17"
-      text-anchor="middle"
-      font-size="13"
-      font-weight="bold"
-      fill="currentColor"
-      stroke="none"
-    >
-      I
-    </text>
-  </symbol>
-
-  <!-- Double chevrons up - Ancestors section -->
-  <symbol
-    id="icon-ancestors"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <polyline points="17 11 12 6 7 11"></polyline>
-    <polyline points="17 18 12 13 7 18"></polyline>
-  </symbol>
-
-  <!-- User with plus - Included Modules section -->
-  <symbol
-    id="icon-includes"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-    <circle cx="8.5" cy="7" r="4"></circle>
-
-    <line
-      x1="20"
-      y1="8"
-      x2="20"
-      y2="14"
-    ></line>
-
-    <line
-      x1="23"
-      y1="11"
-      x2="17"
-      y2="11"
-    ></line>
-  </symbol>
-
-  <!-- User with check - Extended Modules section -->
-  <symbol
-    id="icon-extends"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-    <circle cx="8.5" cy="7" r="4"></circle>
-    <polyline points="17 11 19 13 23 9"></polyline>
-  </symbol>
-
-  <!-- List - Sections section -->
-  <symbol
-    id="icon-list"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <line
-      x1="8"
-      y1="6"
-      x2="21"
-      y2="6"
-    ></line>
-
-    <line
-      x1="8"
-      y1="12"
-      x2="21"
-      y2="12"
-    ></line>
-
-    <line
-      x1="8"
-      y1="18"
-      x2="21"
-      y2="18"
-    ></line>
-
-    <line
-      x1="3"
-      y1="6"
-      x2="3.01"
-      y2="6"
-    ></line>
-
-    <line
-      x1="3"
-      y1="12"
-      x2="3.01"
-      y2="12"
-    ></line>
-
-    <line
-      x1="3"
-      y1="18"
-      x2="3.01"
-      y2="18"
-    ></line>
-  </symbol>
-</svg>
-
-<header class="top-navbar">
-  <a href="../index.html" class="navbar-brand">
-    RDoc Documentation
-  </a>
-
-  <!-- Desktop search bar -->
-  <div class="navbar-search navbar-search-desktop" role="search">
-    <form action="#" method="get" accept-charset="utf-8">
-      <input id="search-field" role="combobox" aria-label="Search"
-             aria-autocomplete="list" aria-controls="search-results-desktop"
-             type="text" name="search" placeholder="Search (/) for a class, method..."
-             spellcheck="false" autocomplete="off"
-             title="Type to search, Up and Down to navigate, Enter to load">
-      <ul id="search-results-desktop" aria-label="Search Results"
-          aria-busy="false" aria-expanded="false"
-          aria-atomic="false" class="initially-hidden search-results"></ul>
-    </form>
-  </div>
-
-  <!-- Mobile search icon button -->
-  <button id="search-toggle" class="navbar-search-mobile" aria-label="Open search" type="button">
-    <span aria-hidden="true">🔍</span>
-  </button>
-
-  <!-- Theme toggle button -->
-  <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" type="button">
-    <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
-  </button>
-</header>
-
-<!-- Search Modal (Mobile) -->
-<div id="search-modal" class="search-modal" hidden aria-modal="true" role="dialog" aria-label="Search">
-  <div class="search-modal-backdrop"></div>
-  <div class="search-modal-content">
-    <div class="search-modal-header">
-      <form class="search-modal-form" action="#" method="get" accept-charset="utf-8">
-        <span class="search-modal-icon" aria-hidden="true">🔍</span>
-        <input id="search-field-mobile" role="combobox" aria-label="Search"
-               aria-autocomplete="list" aria-controls="search-results-mobile"
-               type="text" name="search" placeholder="Search documentation"
-               spellcheck="false" autocomplete="off">
-        <button type="button" class="search-modal-close" aria-label="Close search" id="search-modal-close">
-          <span aria-hidden="true">esc</span>
-        </button>
-      </form>
-    </div>
-    <div class="search-modal-body">
-      <ul id="search-results-mobile" aria-label="Search Results"
-          aria-busy="false" aria-expanded="false"
-          aria-atomic="false" class="search-results search-modal-results initially-hidden"></ul>
-      <div class="search-modal-empty">
-        <p>No recent searches</p>
-      </div>
-    </div>
-  </div>
-</div>
-
+<body id="top" role="document" class="module">
 <div id="navigation-toggle" role="button" tabindex="0" aria-label="Toggle sidebar" aria-expanded="true" aria-controls="navigation">
   <span aria-hidden="true">&#9776;</span>
 </div>
 
 
-<nav id="navigation" role="navigation" hidden>
+<nav id="navigation" role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search (/) for a class, method, ..." spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
   
-
-
-
-
-
   
-
   
-
   
-
   
-
   
 
 
   <div class="nav-section">
-    <details class="nav-section-collapsible" open>
-      <summary class="nav-section-header">
-        <span class="nav-section-icon">
-          <svg><use href="#icon-instance-methods"></use></svg>
-        </span>
-        <span class="nav-section-title">Instance Methods</span>
-        <span class="nav-section-chevron">
-          <svg><use href="#icon-chevron"></use></svg>
-        </span>
-      </summary>
-      <ul class="nav-list" role="directory">
-
-        <li ><a href="#method-i-cti_connect">cti_connect</a></li>
-
-        <li ><a href="#method-i-read_byte">read_byte</a></li>
-
-        <li ><a href="#method-i-read_bytes">read_bytes</a></li>
-
-        <li ><a href="#method-i-read_int">read_int</a></li>
-
-        <li ><a href="#method-i-read_long">read_long</a></li>
-
-        <li ><a href="#method-i-read_short">read_short</a></li>
-
-        <li ><a href="#method-i-req_abort">req_abort</a></li>
-
-        <li ><a href="#method-i-req_client_resource">req_client_resource</a></li>
-
-        <li ><a href="#method-i-req_close">req_close</a></li>
-
-        <li ><a href="#method-i-req_continuous">req_continuous</a></li>
-
-        <li ><a href="#method-i-req_eof">req_eof</a></li>
-
-        <li ><a href="#method-i-req_join">req_join</a></li>
-
-        <li ><a href="#method-i-req_missing_resource">req_missing_resource</a></li>
-
-        <li ><a href="#method-i-req_property">req_property</a></li>
-
-        <li ><a href="#method-i-req_reset">req_reset</a></li>
-
-        <li ><a href="#method-i-req_resource">req_resource</a></li>
-
-        <li ><a href="#method-i-req_server_info">req_server_info</a></li>
-
-        <li ><a href="#method-i-req_server_main">req_server_main</a></li>
-
-        <li ><a href="#method-i-req_start_main">req_start_main</a></li>
-
-        <li ><a href="#method-i-req_write">req_write</a></li>
-
-        <li ><a href="#method-i-res_next">res_next</a></li>
-
-        <li ><a href="#method-i-write_byte">write_byte</a></li>
-
-        <li ><a href="#method-i-write_bytes">write_bytes</a></li>
-
-        <li ><a href="#method-i-write_int">write_int</a></li>
-
-        <li ><a href="#method-i-write_long">write_long</a></li>
-
-      </ul>
-    </details>
+    <h3>Instance Methods</h3>
+    <ul class="link-list" role="directory">
+      <li ><a href="#method-i-cti_connect">cti_connect</a></li>
+      <li ><a href="#method-i-read_byte">read_byte</a></li>
+      <li ><a href="#method-i-read_bytes">read_bytes</a></li>
+      <li ><a href="#method-i-read_int">read_int</a></li>
+      <li ><a href="#method-i-read_long">read_long</a></li>
+      <li ><a href="#method-i-read_short">read_short</a></li>
+      <li ><a href="#method-i-req_abort">req_abort</a></li>
+      <li ><a href="#method-i-req_client_resource">req_client_resource</a></li>
+      <li ><a href="#method-i-req_close">req_close</a></li>
+      <li ><a href="#method-i-req_continuous">req_continuous</a></li>
+      <li ><a href="#method-i-req_eof">req_eof</a></li>
+      <li ><a href="#method-i-req_join">req_join</a></li>
+      <li ><a href="#method-i-req_missing_resource">req_missing_resource</a></li>
+      <li ><a href="#method-i-req_property">req_property</a></li>
+      <li ><a href="#method-i-req_reset">req_reset</a></li>
+      <li ><a href="#method-i-req_resource">req_resource</a></li>
+      <li ><a href="#method-i-req_server_info">req_server_info</a></li>
+      <li ><a href="#method-i-req_server_main">req_server_main</a></li>
+      <li ><a href="#method-i-req_start_main">req_start_main</a></li>
+      <li ><a href="#method-i-req_write">req_write</a></li>
+      <li ><a href="#method-i-res_next">res_next</a></li>
+      <li ><a href="#method-i-write_byte">write_byte</a></li>
+      <li ><a href="#method-i-write_bytes">write_bytes</a></li>
+      <li ><a href="#method-i-write_int">write_int</a></li>
+      <li ><a href="#method-i-write_long">write_long</a></li>
+    </ul>
   </div>
 
 
-  <div id="classindex-section" class="nav-section">
-  <details class="nav-section-collapsible" open>
-    <summary class="nav-section-header">
-      <span class="nav-section-icon">
-        <svg><use href="#icon-layers"></use></svg>
-      </span>
-      <span class="nav-section-title">Classes and Modules</span>
-      <span class="nav-section-chevron">
-        <svg><use href="#icon-chevron"></use></svg>
-      </span>
-    </summary>
 
-    <ul class="link-list nav-list"><li><details open><summary><code><a href="../CTI.html">CTI</a></code></summary><ul class="link-list nav-list"><li><details><summary><code><a href="../CTI/Builder.html">Builder</a></code></summary><ul class="link-list nav-list"><li><code><a href="../CTI/Builder/FileBuilder.html">FileBuilder</a></code></li><li><code><a href="../CTI/Builder/Fragment.html">Fragment</a></code></li><li><code><a href="../CTI/Builder/NullBuilder.html">NullBuilder</a></code></li><li><code><a href="../CTI/Builder/StreamBuilder.html">StreamBuilder</a></code></li></ul></details></li><li><code><a href="../CTI/CTIP2.html">CTIP2</a></code></li><li><code><a href="../CTI/Driver.html">Driver</a></code></li><li><code><a href="../CTI/MainOut.html">MainOut</a></code></li><li><code><a href="../CTI/Resource.html">Resource</a></code></li><li><code><a href="../CTI/ResourceOut.html">ResourceOut</a></code></li><li><details><summary><code><a href="../CTI/Results.html">Results</a></code></summary><ul class="link-list nav-list"><li><code><a href="../CTI/Results/DirectoryResults.html">DirectoryResults</a></code></li><li><code><a href="../CTI/Results/SingleResult.html">SingleResult</a></code></li></ul></details></li><li><code><a href="../CTI/Session.html">Session</a></code></li></ul></details></li></ul>
-  </details>
-</div>
+  <footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.14.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
 
 </nav>
 
 <main role="main" aria-labelledby="module-CTI::CTIP2">
   
   
-    <ol role="navigation" aria-label="Breadcrumb navigation" class="breadcrumb">
+    <ol role="navigation" aria-label="breadcrumb" class="breadcrumb">
       
       <li>
         
@@ -494,7 +140,7 @@
   <section class="description">
     <dl class="rdoc-list note-list"><dt>Version</dt>
 <dd>
-<p>$Id: <a href="../src/code/CTI/CTIP2/CTIP2_rb.html">CTIP2.rb</a> 902 2013-04-23 05:07:04Z miyabe $</p>
+<p>$Id: CTIP2.rb 902 2013-04-23 05:07:04Z miyabe $</p>
 </dd></dl>
 
 <p>通信プロトコルに関連する各操作です。</p>
@@ -503,407 +149,208 @@
 
   </section>
 
-
   <section id="5Buntitled-5D" class="documentation-section anchor-link">
-
-
-
 
 
     <section class="constants-list">
       <header>
-        <h3 id="constants"><a href="#constants">Constants</a></h3>
+        <h3>Constants</h3>
       </header>
       <dl>
-
-        <dt id="CTI_BUFFER_SIZE">CTI_BUFFER_SIZE</dt>
-
+        <dt id="CTI_BUFFER_SIZE">CTI_BUFFER_SIZE
         <dd>
-
           <p>パケットの送信に使うバッファのサイズです。</p>
-        </dd>
-
-
-        <dt id="FRG_MEM_SIZE">FRG_MEM_SIZE</dt>
-
+        <dt id="FRG_MEM_SIZE">FRG_MEM_SIZE
         <dd>
-
           <p>メモリ上のフラグメントの最大サイズです。</p>
 
 <p>フラグメントがこの大きさを超えるとディスクに書き込みます。</p>
-        </dd>
-
-
-        <dt id="ON_MEMORY">ON_MEMORY</dt>
-
+        <dt id="ON_MEMORY">ON_MEMORY
         <dd>
-
           <p>メモリ上に置かれるデータの最大サイズです。</p>
 
 <p>メモリ上のデータがこのサイズを超えると、FRG_MEM_SIZEとは無関係にディスクに書き込まれます。</p>
-        </dd>
-
-
-        <dt id="REQ_ABORT">REQ_ABORT</dt>
-
+        <dt id="REQ_ABORT">REQ_ABORT
         <dd>
-
           
-        </dd>
-
-
-        <dt id="REQ_CLIENT_RESOURCE">REQ_CLIENT_RESOURCE</dt>
-
+        <dt id="REQ_CLIENT_RESOURCE">REQ_CLIENT_RESOURCE
         <dd>
-
           
-        </dd>
-
-
-        <dt id="REQ_CLOSE">REQ_CLOSE</dt>
-
+        <dt id="REQ_CLOSE">REQ_CLOSE
         <dd>
-
           
-        </dd>
-
-
-        <dt id="REQ_CONTINUOUS">REQ_CONTINUOUS</dt>
-
+        <dt id="REQ_CONTINUOUS">REQ_CONTINUOUS
         <dd>
-
           
-        </dd>
-
-
-        <dt id="REQ_DATA">REQ_DATA</dt>
-
+        <dt id="REQ_DATA">REQ_DATA
         <dd>
-
           
-        </dd>
-
-
-        <dt id="REQ_EOF">REQ_EOF</dt>
-
+        <dt id="REQ_EOF">REQ_EOF
         <dd>
-
           
-        </dd>
-
-
-        <dt id="REQ_JOIN">REQ_JOIN</dt>
-
+        <dt id="REQ_JOIN">REQ_JOIN
         <dd>
-
           
-        </dd>
-
-
-        <dt id="REQ_MISSING_RESOURCE">REQ_MISSING_RESOURCE</dt>
-
+        <dt id="REQ_MISSING_RESOURCE">REQ_MISSING_RESOURCE
         <dd>
-
           
-        </dd>
-
-
-        <dt id="REQ_PROPERTY">REQ_PROPERTY</dt>
-
+        <dt id="REQ_PROPERTY">REQ_PROPERTY
         <dd>
-
           
-        </dd>
-
-
-        <dt id="REQ_RESET">REQ_RESET</dt>
-
+        <dt id="REQ_RESET">REQ_RESET
         <dd>
-
           
-        </dd>
-
-
-        <dt id="REQ_SERVER_INFO">REQ_SERVER_INFO</dt>
-
+        <dt id="REQ_SERVER_INFO">REQ_SERVER_INFO
         <dd>
-
           
-        </dd>
-
-
-        <dt id="REQ_SERVER_MAIN">REQ_SERVER_MAIN</dt>
-
+        <dt id="REQ_SERVER_MAIN">REQ_SERVER_MAIN
         <dd>
-
           
-        </dd>
-
-
-        <dt id="REQ_START_MAIN">REQ_START_MAIN</dt>
-
+        <dt id="REQ_START_MAIN">REQ_START_MAIN
         <dd>
-
           
-        </dd>
-
-
-        <dt id="REQ_START_RESOURCE">REQ_START_RESOURCE</dt>
-
+        <dt id="REQ_START_RESOURCE">REQ_START_RESOURCE
         <dd>
-
           
-        </dd>
-
-
-        <dt id="RES_ABORT">RES_ABORT</dt>
-
+        <dt id="RES_ABORT">RES_ABORT
         <dd>
-
           
-        </dd>
-
-
-        <dt id="RES_ADD_BLOCK">RES_ADD_BLOCK</dt>
-
+        <dt id="RES_ADD_BLOCK">RES_ADD_BLOCK
         <dd>
-
           
-        </dd>
-
-
-        <dt id="RES_BLOCK_DATA">RES_BLOCK_DATA</dt>
-
+        <dt id="RES_BLOCK_DATA">RES_BLOCK_DATA
         <dd>
-
           
-        </dd>
-
-
-        <dt id="RES_CLOSE_BLOCK">RES_CLOSE_BLOCK</dt>
-
+        <dt id="RES_CLOSE_BLOCK">RES_CLOSE_BLOCK
         <dd>
-
           
-        </dd>
-
-
-        <dt id="RES_DATA">RES_DATA</dt>
-
+        <dt id="RES_DATA">RES_DATA
         <dd>
-
           
-        </dd>
-
-
-        <dt id="RES_EOF">RES_EOF</dt>
-
+        <dt id="RES_EOF">RES_EOF
         <dd>
-
           
-        </dd>
-
-
-        <dt id="RES_INSERT_BLOCK">RES_INSERT_BLOCK</dt>
-
+        <dt id="RES_INSERT_BLOCK">RES_INSERT_BLOCK
         <dd>
-
           
-        </dd>
-
-
-        <dt id="RES_MAIN_LENGTH">RES_MAIN_LENGTH</dt>
-
+        <dt id="RES_MAIN_LENGTH">RES_MAIN_LENGTH
         <dd>
-
           
-        </dd>
-
-
-        <dt id="RES_MAIN_READ">RES_MAIN_READ</dt>
-
+        <dt id="RES_MAIN_READ">RES_MAIN_READ
         <dd>
-
           
-        </dd>
-
-
-        <dt id="RES_MESSAGE">RES_MESSAGE</dt>
-
+        <dt id="RES_MESSAGE">RES_MESSAGE
         <dd>
-
           
-        </dd>
-
-
-        <dt id="RES_NEXT">RES_NEXT</dt>
-
+        <dt id="RES_NEXT">RES_NEXT
         <dd>
-
           
-        </dd>
-
-
-        <dt id="RES_RESOURCE_REQUEST">RES_RESOURCE_REQUEST</dt>
-
+        <dt id="RES_RESOURCE_REQUEST">RES_RESOURCE_REQUEST
         <dd>
-
           
-        </dd>
-
-
-        <dt id="RES_START_DATA">RES_START_DATA</dt>
-
+        <dt id="RES_START_DATA">RES_START_DATA
         <dd>
-
           
-        </dd>
-
-
-        <dt id="SEGMENT_SIZE">SEGMENT_SIZE</dt>
-
+        <dt id="SEGMENT_SIZE">SEGMENT_SIZE
         <dd>
-
           <p>一時ファイルのセグメントサイズです。</p>
-        </dd>
-
-
       </dl>
     </section>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
      <section id="public-instance-5Buntitled-5D-method-details" class="method-section anchor-link">
        <header>
-         <h3 id="public-instance-methods"><a href="#public-instance-methods">Public Instance Methods</a></h3>
+         <h3>Public Instance Methods</h3>
        </header>
-
 
       <div id="method-i-cti_connect" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-cti_connect" title="Link to this method">
                 <span class="method-name">cti_connect</span>
                 <span class="method-args">(encoding)</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="cti_connect-source">
-            <pre class="ruby" data-language="ruby">   <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
+            <pre>   <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
 <span class="line-num">71</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">cti_connect</span>(<span class="ruby-identifier">encoding</span>)
 <span class="line-num">72</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write</span>(<span class="ruby-node">&quot;CTIP/2.0 #{encoding}\n&quot;</span>)
 <span class="line-num">73</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>セッションを開始します。</p>
 <dl class="rdoc-list note-list"><dt>encoding</dt>
 <dd>
 <p>通信に用いるエンコーディング</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-read_byte" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-read_byte" title="Link to this method">
                 <span class="method-name">read_byte</span>
                 <span class="method-args">()</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="read_byte-source">
-            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/CTIP2/Utils.rb</span>
+            <pre>    <span class="ruby-comment"># File src/code/CTI/CTIP2/Utils.rb</span>
 <span class="line-num"> 99</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">read_byte</span>
 <span class="line-num">100</span>   <span class="ruby-identifier">b</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">read</span>(<span class="ruby-value">1</span>)
 <span class="line-num">101</span>   <span class="ruby-identifier">b</span> = <span class="ruby-identifier">b</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&#39;C&#39;</span>)
 <span class="line-num">102</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">b</span>[<span class="ruby-value">0</span>]
 <span class="line-num">103</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>8ビット数値を読み込みます。</p>
 <dl class="rdoc-list note-list"><dt>戻り値</dt>
 <dd>
 <p>数値、エラーであればfalse</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-read_bytes" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-read_bytes" title="Link to this method">
                 <span class="method-name">read_bytes</span>
                 <span class="method-args">()</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="read_bytes-source">
-            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/CTIP2/Utils.rb</span>
+            <pre>    <span class="ruby-comment"># File src/code/CTI/CTIP2/Utils.rb</span>
 <span class="line-num">111</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">read_bytes</span>
 <span class="line-num">112</span>   <span class="ruby-identifier">b</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">read</span>(<span class="ruby-value">2</span>)
 <span class="line-num">113</span>   <span class="ruby-identifier">a</span> = <span class="ruby-identifier">b</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&#39;n&#39;</span>)
@@ -912,96 +359,70 @@
 <span class="line-num">116</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">b</span>;
 <span class="line-num">117</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>16ビットビッグインディアン数値を読み込み、そのバイト数だけバイト列を読み込みます。</p>
 <dl class="rdoc-list note-list"><dt>戻り値</dt>
 <dd>
 <p>バイト列、エラーであればfalse</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-read_int" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-read_int" title="Link to this method">
                 <span class="method-name">read_int</span>
                 <span class="method-args">()</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="read_int-source">
-            <pre class="ruby" data-language="ruby">   <span class="ruby-comment"># File src/code/CTI/CTIP2/Utils.rb</span>
+            <pre>   <span class="ruby-comment"># File src/code/CTI/CTIP2/Utils.rb</span>
 <span class="line-num">65</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">read_int</span>
 <span class="line-num">66</span>   <span class="ruby-identifier">b</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">read</span>(<span class="ruby-value">4</span>)
 <span class="line-num">67</span>   <span class="ruby-identifier">a</span> = <span class="ruby-identifier">b</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&#39;N&#39;</span>)
 <span class="line-num">68</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>]
 <span class="line-num">69</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>32ビットビッグインディアン数値を読み込みます。</p>
 <dl class="rdoc-list note-list"><dt>戻り値</dt>
 <dd>
 <p>数値、エラーであればfalse</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-read_long" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-read_long" title="Link to this method">
                 <span class="method-name">read_long</span>
                 <span class="method-args">()</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="read_long-source">
-            <pre class="ruby" data-language="ruby">   <span class="ruby-comment"># File src/code/CTI/CTIP2/Utils.rb</span>
+            <pre>   <span class="ruby-comment"># File src/code/CTI/CTIP2/Utils.rb</span>
 <span class="line-num">77</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">read_long</span>
 <span class="line-num">78</span>   <span class="ruby-identifier">b</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">read</span>(<span class="ruby-value">8</span>)
 <span class="line-num">79</span>   <span class="ruby-identifier">a</span> = <span class="ruby-identifier">b</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&#39;NN&#39;</span>)
@@ -1018,96 +439,70 @@
 <span class="line-num">90</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">b</span>;
 <span class="line-num">91</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>64ビットビッグインディアン数値を読み込みます。</p>
 <dl class="rdoc-list note-list"><dt>戻り値</dt>
 <dd>
 <p>数値、エラーであればfalse</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-read_short" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-read_short" title="Link to this method">
                 <span class="method-name">read_short</span>
                 <span class="method-args">()</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="read_short-source">
-            <pre class="ruby" data-language="ruby">   <span class="ruby-comment"># File src/code/CTI/CTIP2/Utils.rb</span>
+            <pre>   <span class="ruby-comment"># File src/code/CTI/CTIP2/Utils.rb</span>
 <span class="line-num">53</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">read_short</span>
 <span class="line-num">54</span>   <span class="ruby-identifier">b</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">read</span>(<span class="ruby-value">2</span>)
 <span class="line-num">55</span>   <span class="ruby-identifier">a</span> = <span class="ruby-identifier">b</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&#39;n&#39;</span>)
 <span class="line-num">56</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>]
 <span class="line-num">57</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>16ビットビッグインディアン数値を読み込みます。</p>
 <dl class="rdoc-list note-list"><dt>戻り値</dt>
 <dd>
 <p>数値、エラーであればfalse</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-req_abort" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-req_abort" title="Link to this method">
                 <span class="method-name">req_abort</span>
                 <span class="method-args">(mode)</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="req_abort-source">
-            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
+            <pre>    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
 <span class="line-num">148</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">req_abort</span>(<span class="ruby-identifier">mode</span>)
 <span class="line-num">149</span>   <span class="ruby-identifier">payload</span> = <span class="ruby-value">2</span>
 <span class="line-num">150</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write_int</span>(<span class="ruby-identifier">payload</span>)
@@ -1116,48 +511,35 @@
 <span class="line-num">153</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">flush</span>
 <span class="line-num">154</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>変換処理の中断を要求します。</p>
 <dl class="rdoc-list note-list"><dt>mode</dt>
 <dd>
 <p>0=生成済みのデータを出力して中断, 1=即時中断</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-req_client_resource" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-req_client_resource" title="Link to this method">
                 <span class="method-name">req_client_resource</span>
                 <span class="method-args">(mode)</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="req_client_resource-source">
-            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
+            <pre>    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
 <span class="line-num"> 95</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">req_client_resource</span>(<span class="ruby-identifier">mode</span>)
 <span class="line-num"> 96</span>   <span class="ruby-identifier">payload</span> = <span class="ruby-value">2</span>
 <span class="line-num"> 97</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write_int</span>(<span class="ruby-identifier">payload</span>)
@@ -1166,48 +548,35 @@
 <span class="line-num">100</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">flush</span>
 <span class="line-num">101</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>サーバーからクライアントのリソースを要求するモードを切り替えます。</p>
 <dl class="rdoc-list note-list"><dt>mode</dt>
 <dd>
 <p>0=off, 1=on</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-req_close" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-req_close" title="Link to this method">
                 <span class="method-name">req_close</span>
                 <span class="method-args">()</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="req_close-source">
-            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
+            <pre>    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
 <span class="line-num">266</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">req_close</span>
 <span class="line-num">267</span>   <span class="ruby-identifier">payload</span> = <span class="ruby-value">1</span>
 <span class="line-num">268</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write_int</span>(<span class="ruby-identifier">payload</span>)
@@ -1215,44 +584,31 @@
 <span class="line-num">270</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">flush</span>
 <span class="line-num">271</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>通信を終了します。</p>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-req_continuous" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-req_continuous" title="Link to this method">
                 <span class="method-name">req_continuous</span>
                 <span class="method-args">(mode)</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="req_continuous-source">
-            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
+            <pre>    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
 <span class="line-num">109</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">req_continuous</span>(<span class="ruby-identifier">mode</span>)
 <span class="line-num">110</span>   <span class="ruby-identifier">payload</span> = <span class="ruby-value">2</span>
 <span class="line-num">111</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write_int</span>(<span class="ruby-identifier">payload</span>)
@@ -1261,48 +617,35 @@
 <span class="line-num">114</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">flush</span>
 <span class="line-num">115</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>複数の結果を結合するモードを切り替えます。</p>
 <dl class="rdoc-list note-list"><dt>mode</dt>
 <dd>
 <p>0=off, 1=on</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-req_eof" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-req_eof" title="Link to this method">
                 <span class="method-name">req_eof</span>
                 <span class="method-args">()</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="req_eof-source">
-            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
+            <pre>    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
 <span class="line-num">171</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">req_eof</span>
 <span class="line-num">172</span>   <span class="ruby-identifier">payload</span> = <span class="ruby-value">1</span>
 <span class="line-num">173</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write_int</span>(<span class="ruby-identifier">payload</span>)
@@ -1310,44 +653,31 @@
 <span class="line-num">175</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">flush</span>
 <span class="line-num">176</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>終了を通知します。</p>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-req_join" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-req_join" title="Link to this method">
                 <span class="method-name">req_join</span>
                 <span class="method-args">()</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="req_join-source">
-            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
+            <pre>    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
 <span class="line-num">160</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">req_join</span>
 <span class="line-num">161</span>   <span class="ruby-identifier">payload</span> = <span class="ruby-value">1</span>
 <span class="line-num">162</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write_int</span>(<span class="ruby-identifier">payload</span>)
@@ -1355,44 +685,31 @@
 <span class="line-num">164</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">flush</span>
 <span class="line-num">165</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>変換結果を結合します。</p>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-req_missing_resource" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-req_missing_resource" title="Link to this method">
                 <span class="method-name">req_missing_resource</span>
                 <span class="method-args">(uri)</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="req_missing_resource-source">
-            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
+            <pre>    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
 <span class="line-num">123</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">req_missing_resource</span>(<span class="ruby-identifier">uri</span>)
 <span class="line-num">124</span>   <span class="ruby-identifier">payload</span> = <span class="ruby-value">1</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">bytesize</span>
 <span class="line-num">125</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write_int</span>(<span class="ruby-identifier">payload</span>)
@@ -1401,48 +718,35 @@
 <span class="line-num">128</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">flush</span>
 <span class="line-num">129</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>リソースの不存在を通知します。</p>
 <dl class="rdoc-list note-list"><dt>uri</dt>
 <dd>
 <p>URI</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-req_property" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-req_property" title="Link to this method">
                 <span class="method-name">req_property</span>
                 <span class="method-args">(name, value)</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="req_property-source">
-            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
+            <pre>    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
 <span class="line-num">185</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">req_property</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span>)
 <span class="line-num">186</span>   <span class="ruby-identifier">payload</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">bytesize</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">bytesize</span> <span class="ruby-operator">+</span> <span class="ruby-value">5</span>
 <span class="line-num">187</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write_int</span>(<span class="ruby-identifier">payload</span>)
@@ -1452,12 +756,6 @@
 <span class="line-num">191</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">flush</span>
 <span class="line-num">192</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>プロパティを送ります。</p>
 <dl class="rdoc-list note-list"><dt>name</dt>
 <dd>
@@ -1466,37 +764,30 @@
 <dd>
 <p>値</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-req_reset" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-req_reset" title="Link to this method">
                 <span class="method-name">req_reset</span>
                 <span class="method-args">()</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="req_reset-source">
-            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
+            <pre>    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
 <span class="line-num">135</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">req_reset</span>
 <span class="line-num">136</span>   <span class="ruby-identifier">payload</span> = <span class="ruby-value">1</span>
 <span class="line-num">137</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write_int</span>(<span class="ruby-identifier">payload</span>)
@@ -1504,44 +795,31 @@
 <span class="line-num">139</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">flush</span>
 <span class="line-num">140</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>状態のリセットを要求します。</p>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-req_resource" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-req_resource" title="Link to this method">
                 <span class="method-name">req_resource</span>
                 <span class="method-args">(uri, mime_type = &#39;text/css&#39;, encoding = &#39;&#39;, length = -1)</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="req_resource-source">
-            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
+            <pre>    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
 <span class="line-num">217</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">req_resource</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">mime_type</span> = <span class="ruby-string">&#39;text/css&#39;</span>, <span class="ruby-identifier">encoding</span> = <span class="ruby-string">&#39;&#39;</span>, <span class="ruby-identifier">length</span> = <span class="ruby-value">-1</span>)
 <span class="line-num">218</span>   <span class="ruby-identifier">payload</span> = <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">bytesize</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">mime_type</span>.<span class="ruby-identifier">bytesize</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">encoding</span>.<span class="ruby-identifier">bytesize</span> <span class="ruby-operator">+</span> <span class="ruby-value">7</span> <span class="ruby-operator">+</span> <span class="ruby-value">8</span>
 <span class="line-num">219</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write_int</span>(<span class="ruby-identifier">payload</span>)
@@ -1553,12 +831,6 @@
 <span class="line-num">225</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">flush</span>
 <span class="line-num">226</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>リソースの開始を通知します。</p>
 <dl class="rdoc-list note-list"><dt>uri</dt>
 <dd>
@@ -1573,37 +845,30 @@
 <dd>
 <p>長さ</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-req_server_info" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-req_server_info" title="Link to this method">
                 <span class="method-name">req_server_info</span>
                 <span class="method-args">(uri)</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="req_server_info-source">
-            <pre class="ruby" data-language="ruby">   <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
+            <pre>   <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
 <span class="line-num">81</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">req_server_info</span>(<span class="ruby-identifier">uri</span>)
 <span class="line-num">82</span>   <span class="ruby-identifier">payload</span> = <span class="ruby-value">1</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">bytesize</span>
 <span class="line-num">83</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write_int</span>(<span class="ruby-identifier">payload</span>)
@@ -1612,48 +877,35 @@
 <span class="line-num">86</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">flush</span>
 <span class="line-num">87</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>サーバー情報を要求します。</p>
 <dl class="rdoc-list note-list"><dt>uri</dt>
 <dd>
 <p>URI</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-req_server_main" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-req_server_main" title="Link to this method">
                 <span class="method-name">req_server_main</span>
                 <span class="method-args">(uri)</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="req_server_main-source">
-            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
+            <pre>    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
 <span class="line-num">200</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">req_server_main</span>(<span class="ruby-identifier">uri</span>)
 <span class="line-num">201</span>   <span class="ruby-identifier">payload</span> = <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">bytesize</span> <span class="ruby-operator">+</span> <span class="ruby-value">3</span>
 <span class="line-num">202</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write_int</span>(<span class="ruby-identifier">payload</span>)
@@ -1662,48 +914,35 @@
 <span class="line-num">205</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">flush</span>
 <span class="line-num">206</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>サーバー側データの変換を要求します。</p>
 <dl class="rdoc-list note-list"><dt>uri</dt>
 <dd>
 <p>URI</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-req_start_main" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-req_start_main" title="Link to this method">
                 <span class="method-name">req_start_main</span>
                 <span class="method-args">(uri, mime_type = &#39;text/html&#39;, encoding = &#39;&#39;, length = -1)</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="req_start_main-source">
-            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
+            <pre>    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
 <span class="line-num">237</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">req_start_main</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">mime_type</span> = <span class="ruby-string">&#39;text/html&#39;</span>, <span class="ruby-identifier">encoding</span> = <span class="ruby-string">&#39;&#39;</span>, <span class="ruby-identifier">length</span> = <span class="ruby-value">-1</span>)
 <span class="line-num">238</span>   <span class="ruby-identifier">payload</span> = <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">bytesize</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">mime_type</span>.<span class="ruby-identifier">bytesize</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">encoding</span>.<span class="ruby-identifier">bytesize</span> <span class="ruby-operator">+</span> <span class="ruby-value">7</span> <span class="ruby-operator">+</span> <span class="ruby-value">8</span>
 <span class="line-num">239</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write_int</span>(<span class="ruby-identifier">payload</span>)
@@ -1715,12 +954,6 @@
 <span class="line-num">245</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">flush</span>
 <span class="line-num">246</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>本体の開始を通知します。</p>
 <dl class="rdoc-list note-list"><dt>uri</dt>
 <dd>
@@ -1735,37 +968,30 @@
 <dd>
 <p>長さ</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-req_write" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-req_write" title="Link to this method">
                 <span class="method-name">req_write</span>
                 <span class="method-args">(b)</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="req_write-source">
-            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
+            <pre>    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
 <span class="line-num">254</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">req_write</span>(<span class="ruby-identifier">b</span>)
 <span class="line-num">255</span>   <span class="ruby-identifier">payload</span> = <span class="ruby-identifier">b</span>.<span class="ruby-identifier">bytesize</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
 <span class="line-num">256</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write_int</span>(<span class="ruby-identifier">payload</span>)
@@ -1774,48 +1000,35 @@
 <span class="line-num">259</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">flush</span>
 <span class="line-num">260</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>データを送ります。</p>
 <dl class="rdoc-list note-list"><dt>b</dt>
 <dd>
 <p>データ</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-res_next" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-res_next" title="Link to this method">
                 <span class="method-name">res_next</span>
                 <span class="method-args">()</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="res_next-source">
-            <pre class="ruby" data-language="ruby">    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
+            <pre>    <span class="ruby-comment"># File src/code/CTI/CTIP2/CTIP2.rb</span>
 <span class="line-num">289</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">res_next</span>
 <span class="line-num">290</span>   <span class="ruby-identifier">payload</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">read_int</span>
 <span class="line-num">291</span>   <span class="ruby-identifier">type</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">read_byte</span>
@@ -1923,12 +1136,6 @@
 <span class="line-num">393</span>   <span class="ruby-keyword">end</span>
 <span class="line-num">394</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>次のレスポンスを取得します。</p>
 
 <p>結果ハッシュには次のデータが含まれます。</p>
@@ -1951,47 +1158,34 @@
 <dd>
 <p>レスポンス</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-write_byte" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-write_byte" title="Link to this method">
                 <span class="method-name">write_byte</span>
                 <span class="method-args">(b)</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="write_byte-source">
-            <pre class="ruby" data-language="ruby">   <span class="ruby-comment"># File src/code/CTI/CTIP2/Utils.rb</span>
+            <pre>   <span class="ruby-comment"># File src/code/CTI/CTIP2/Utils.rb</span>
 <span class="line-num">31</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">write_byte</span>(<span class="ruby-identifier">b</span>)
 <span class="line-num">32</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write</span>([<span class="ruby-identifier">b</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&#39;C&#39;</span>))
 <span class="line-num">33</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>8ビット数値を書き出します。</p>
 <dl class="rdoc-list note-list"><dt>a</dt>
 <dd>
@@ -2000,48 +1194,35 @@
 <dd>
 <p>書き込んだバイト数</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-write_bytes" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-write_bytes" title="Link to this method">
                 <span class="method-name">write_bytes</span>
                 <span class="method-args">(b)</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="write_bytes-source">
-            <pre class="ruby" data-language="ruby">   <span class="ruby-comment"># File src/code/CTI/CTIP2/Utils.rb</span>
+            <pre>   <span class="ruby-comment"># File src/code/CTI/CTIP2/Utils.rb</span>
 <span class="line-num">42</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">write_bytes</span>(<span class="ruby-identifier">b</span>)
 <span class="line-num">43</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write</span>([<span class="ruby-identifier">b</span>.<span class="ruby-identifier">bytesize</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&#39;n&#39;</span>))
 <span class="line-num">44</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">b</span>)
 <span class="line-num">45</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>バイト数を16ビットビッグインディアンで書き出した後、バイト列を書き出します。</p>
 <dl class="rdoc-list note-list"><dt>b</dt>
 <dd>
@@ -2050,47 +1231,34 @@
 <dd>
 <p>書き込んだバイト数</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-write_int" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-write_int" title="Link to this method">
                 <span class="method-name">write_int</span>
                 <span class="method-args">(a)</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="write_int-source">
-            <pre class="ruby" data-language="ruby">   <span class="ruby-comment"># File src/code/CTI/CTIP2/Utils.rb</span>
+            <pre>   <span class="ruby-comment"># File src/code/CTI/CTIP2/Utils.rb</span>
 <span class="line-num"> 9</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">write_int</span>(<span class="ruby-identifier">a</span>)
 <span class="line-num">10</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write</span>([<span class="ruby-identifier">a</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&#39;N&#39;</span>))
 <span class="line-num">11</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>32ビット数値をビッグインディアンで書き出します。</p>
 <dl class="rdoc-list note-list"><dt>a</dt>
 <dd>
@@ -2099,47 +1267,34 @@
 <dd>
 <p>書き込んだバイト数</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
       <div id="method-i-write_long" class="method-detail anchor-link ">
         <div class="method-header">
-
             <div class="method-heading">
               <a href="#method-i-write_long" title="Link to this method">
                 <span class="method-name">write_long</span>
                 <span class="method-args">(a)</span>
               </a>
             </div>
-
         </div>
-
 
           <div class="method-controls">
             <details class="method-source-toggle">
               <summary>Source</summary>
             </details>
           </div>
+
+        <div class="method-description">
           <div class="method-source-code" id="write_long-source">
-            <pre class="ruby" data-language="ruby">   <span class="ruby-comment"># File src/code/CTI/CTIP2/Utils.rb</span>
+            <pre>   <span class="ruby-comment"># File src/code/CTI/CTIP2/Utils.rb</span>
 <span class="line-num">20</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">write_long</span>(<span class="ruby-identifier">a</span>)
 <span class="line-num">21</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write</span>([<span class="ruby-identifier">a</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">32</span>, <span class="ruby-identifier">a</span> <span class="ruby-operator">&amp;</span> <span class="ruby-value">0xFFFFFFFF</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&#39;NN&#39;</span>))
 <span class="line-num">22</span> <span class="ruby-keyword">end</span></pre>
           </div>
-
-
-
-        <div class="method-description">
-
-
           <p>64ビット数値をビッグインディアンで書き出します。</p>
 <dl class="rdoc-list note-list"><dt>a</dt>
 <dd>
@@ -2148,46 +1303,13 @@
 <dd>
 <p>書き込んだバイト数</p>
 </dd></dl>
-
-
         </div>
-
-
-
 
 
       </div>
 
-
     </section>
 
-
-
-
   </section>
-
 </main>
-
-<aside class="table-of-contents" role="complementary" aria-label="Table of Contents">
-  <div class="toc-sticky">
-    <h3 class="toc-heading">On This Page</h3>
-    <nav class="toc-nav" id="toc-nav" aria-label="Page sections">
-      <!-- Generated by JavaScript based on page headings -->
-    </nav>
-  </div>
-</aside>
-
-
-<footer class="site-footer">
-  
-
-  <div class="footer-bottom">
-    <p>
-      Generated by <a href="https://ruby.github.io/rdoc/">RDoc 7.0.3</a>
-      using the Aliki theme by <a href="http://st0012.dev">Stan Lo</a>
-    </p>
-  </div>
-</footer>
-
-</body>
 

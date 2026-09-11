@@ -1,12 +1,12 @@
 /*
- * SearchNavigation allows movement using the arrow keys through the search results.
+ * Navigation allows movement using the arrow keys through the search results.
  *
  * When using this library you will need to set scrollIntoView to the
  * appropriate function for your layout.  Use scrollInWindow if the container
  * is not scrollable and scrollInElement if the container is a separate
  * scrolling region.
  */
-SearchNavigation = new function() {
+Navigation = new function() {
   this.initNavigation = function() {
     var _this = this;
 
