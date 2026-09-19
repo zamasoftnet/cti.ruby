@@ -40,6 +40,14 @@ require 'CTI'
 
 ### gem コマンドを使う方法
 
+RubyGems.org に公開しています(https://rubygems.org/gems/copper-cti)。
+
+```bash
+gem install copper-cti
+```
+
+開発版を GitHub から直接入れる場合:
+
 ```bash
 gem install specific_install
 gem specific_install https://github.com/zamasoftnet/cti.ruby.git
