@@ -23,6 +23,12 @@ http://dl.cssj.jp/docs/copper/3.2/html/3424_ctip2_ruby.html
 `Gemfile` に以下を追加してください。
 
 ```ruby
+gem 'copper-cti', '~> 2.2'
+```
+
+開発版を GitHub から直接入れる場合:
+
+```ruby
 gem 'copper-cti', git: 'https://github.com/zamasoftnet/cti.ruby.git'
 ```
 
