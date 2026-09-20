@@ -2,6 +2,7 @@ require_relative '../code/CTI'
 require 'fileutils'
 require 'minitest/autorun'
 require 'socket'
+require 'openssl'
 
 module CTIDriverTests
   include CTI
@@ -13,6 +14,11 @@ module CTIDriverTests
   USER = ENV.fetch('CTI_TEST_USER', 'user')
   PASSWORD = ENV.fetch('CTI_TEST_PASSWORD', 'kappa')
   URI = ENV.fetch('CTI_SERVER_URI', 'ctip://cti.li/')
+  # 接続試験マトリクスの共通契約(copperpdf4/docs/design/2026-09-20-cti-driver-tls-test-matrix-design.md §2):
+  # CTI_TLS_INSECURE=1 で証明書を検証しない、CTI_EXPECT_REJECT=1 で「証明書の検証で拒否されること」だけを試験する
+  INSECURE = ENV['CTI_TLS_INSECURE'] == '1'
+  EXPECT_REJECT = ENV['CTI_EXPECT_REJECT'] == '1'
+  raise 'CTI_TLS_INSECURE=1 と CTI_EXPECT_REJECT=1 は同時に指定できません' if INSECURE && EXPECT_REJECT
 
   def self.server_available?
     uri = URI.dup
@@ -38,6 +44,23 @@ module CTIDriverTests
   end
 end
 
+if CTIDriverTests::EXPECT_REJECT
+  # 拒否試験(tls-reject / tls-badname): 接続を起こし、証明書の検証エラーで拒否されることだけを確かめる。
+  # 変換まで進む・DNS・接続拒否・認証失敗は成功に数えない
+  class TestCTIReject < Minitest::Test
+    include CTIDriverTests
+
+    def test_certificate_verification_rejects
+      error = assert_raises(OpenSSL::SSL::SSLError) do
+        get_session(CTIDriverTests::URI, 'user' => CTIDriverTests::USER, 'password' => CTIDriverTests::PASSWORD)
+      end
+      puts "CTI-MATRIX reject: #{error.message}"
+      assert_match(/certificate verify failed|hostname/i, error.message)
+    end
+  end
+end
+
+unless CTIDriverTests::EXPECT_REJECT
 class TestCTIDriver < Minitest::Test
   include CTIDriverTests
 
@@ -69,12 +92,14 @@ class TestCTIDriver < Minitest::Test
     end
   end
 
+  def session_options
+    opts = { 'user' => CTIDriverTests::USER, 'password' => CTIDriverTests::PASSWORD }
+    opts['insecure'] = true if CTIDriverTests::INSECURE
+    opts
+  end
+
   def with_session
-    get_session(
-      CTIDriverTests::URI,
-      'user' => CTIDriverTests::USER,
-      'password' => CTIDriverTests::PASSWORD
-    ) do |session|
+    get_session(CTIDriverTests::URI, session_options) do |session|
       yield session
     end
   end
@@ -89,11 +114,7 @@ class TestCTIDriver < Minitest::Test
 
   def test_authentication_failure
     assert_raises(RuntimeError) do
-      get_session(
-        CTIDriverTests::URI,
-        'user' => 'invalid-user',
-        'password' => 'invalid-password'
-      )
+      get_session(CTIDriverTests::URI, session_options.merge('user' => 'invalid-user', 'password' => 'invalid-password'))
     end
   end
 
@@ -198,4 +219,5 @@ class TestCTIDriver < Minitest::Test
     assert_pdf(output_1)
     assert_pdf(output_2)
   end
+end
 end
