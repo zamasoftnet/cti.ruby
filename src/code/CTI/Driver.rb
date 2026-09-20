@@ -48,11 +48,17 @@ options:: 接続オプション
         require 'openssl'
         ctx = OpenSSL::SSL::SSLContext.new
         ctx.set_params  # 既定のCAと VERIFY_PEER を入れる
+        # 試験用の逃げ道: options の 'insecure' が真なら証明書を検証しない
+        # (自己署名の試験サーバー向け。本番では相手が誰かを確かめないまま
+        # 話すことになるので使わない。他言語版の Java --insecure / .NET ?insecure=1 /
+        # Node.js rejectUnauthorized:false に相当。2026-09-20)
+        insecure = [true, 'true', '1', 1].include?(options['insecure'] || options[:insecure])
+        ctx.verify_mode = OpenSSL::SSL::VERIFY_NONE if insecure
         io = OpenSSL::SSL::SSLSocket.new(io, ctx)
         io.hostname = host  # SNI
         io.sync_close = true
         io.connect
-        io.post_connection_check(host)  # 証明書の名前がホストと一致するか
+        io.post_connection_check(host) unless insecure  # 証明書の名前がホストと一致するか
       end
       session = Session.new(io, options)
       if block

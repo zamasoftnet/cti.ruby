@@ -2,7 +2,7 @@
 
 [Copper PDF](https://copper-pdf.com/) 文書変換サーバーに接続するためのRubyドライバです。
 
-バージョン 2.2.0
+バージョン 2.2.1
 
 使用方法は付属のAPIドキュメント、サンプルプログラム、以下のオンラインマニュアルを参照してください。
 
@@ -67,6 +67,24 @@ gem specific_install https://github.com/zamasoftnet/cti.ruby.git
 $LOAD_PATH.unshift('/path/to/src/code')
 require 'CTI'
 ```
+
+## TLS で接続する (ctips:)
+
+`ctips://ホスト名:ポート/` を指定すると TLS で接続します。SNI を送り、サーバー証明書と
+ホスト名を既定で検証します(2.2.0 以降)。自己署名や独自の認証局の証明書は、環境変数
+`SSL_CERT_FILE` に証明書ファイルを指定するなどして OpenSSL に信頼させてください。
+
+試験用に検証を省くには、オプションに `'insecure' => true` を渡します(2.2.1 以降。
+本番では使わないでください)。
+
+```ruby
+session = CTI.get_session('ctips://localhost:8094/', {
+  'user' => 'user', 'password' => 'kappa', 'insecure' => true
+})
+```
+
+Copper PDF 3.2 のサーバー自身の TLS 待受(`copperd.properties` の `jp.cssj.cssjd.tls.port`)と、
+TLS を終端する中継の先にあるサーバーの両方で確認しています。
 
 ## 基本的な使い方
 
@@ -186,6 +204,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ## 変更履歴
+
+### v2.2.1 (2026/9/20)
+- 試験用に証明書の検証を省くオプションを追加しました。`get_session` の
+  オプションに `'insecure' => true` を渡すと、自己署名の証明書でも接続します
+  (本番では使わないでください。相手が誰かを確かめないまま話すことになります)。
+  他言語版の Java `--insecure`、.NET `?insecure=1`、Node.js `rejectUnauthorized: false` に相当します。
 
 ### v2.2.0 (2026/9/10)
 - **`ctips:` が使えるようになりました。**従来は接続の途中で
