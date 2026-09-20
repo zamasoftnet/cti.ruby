@@ -3,6 +3,7 @@ require 'fileutils'
 require 'minitest/autorun'
 require 'socket'
 require 'openssl'
+require 'stringio'
 
 module CTIDriverTests
   include CTI
@@ -218,6 +219,104 @@ class TestCTIDriver < Minitest::Test
 
     assert_pdf(output_1)
     assert_pdf(output_2)
+  end
+
+  # ---- プロトコルの周辺機能(2026-09-20、接続試験マトリクスの拡張)。
+  # 主要機能の 8 項目に、メッセージ受信・中断・ストリーム出力・連続結合を足す。7 本のドライバで同じ 4 項目。
+
+  MISSING_CSS_HTML = '<html><head><link rel="stylesheet" href="missing.css"></head><body><p>message test</p></body></html>'
+
+  def big_html(paragraphs)
+    '<html><body>' + (0...paragraphs).map { |i| "<p>paragraph #{i} #{'x' * 300}</p>" }.join + '</body></html>'
+  end
+
+  def transcode_string(session, html)
+    session.transcode('.', { 'mime_type' => 'text/html' }) { |out| out.write(html) }
+  end
+
+  # 存在しないスタイルシートを参照する文書を変換し、サーバーのエラーメッセージがブロックに届く
+  # (引数にその名前が入る)ことを確かめる
+  def test_message_callback
+    messages = []
+    buf = StringIO.new
+    buf.binmode
+    with_session do |session|
+      session.receive_message { |code, message, args| messages << [code, message, args] }
+      session.set_output_as_stream(buf)
+      transcode_string(session, MISSING_CSS_HTML)
+    end
+    assert_equal '%PDF', buf.string[0, 4]
+    hits = messages.select { |code, message, args| args.include?('missing.css') || message.include?('missing.css') }
+    refute_empty hits, "missing.css についてのメッセージが届いていない: #{messages.inspect}"
+    hits.each { |code, _, _| assert code.is_a?(Integer) && code > 0 }
+  end
+
+  # 本文の送信中に abort を送ると変換が止まり(完全な出力が返らない)、reset 後に同じセッションで
+  # 再変換できる。サーバーが中断をどのメッセージで報告するかは版で違うので見ない
+  def test_abort
+    html = big_html(3000)
+    with_session do |session|
+      full = StringIO.new
+      full.binmode
+      session.set_output_as_stream(full)
+      transcode_string(session, html)
+      assert_equal '%PDF', full.string[0, 4]
+      session.reset
+
+      aborted = StringIO.new
+      aborted.binmode
+      session.set_output_as_stream(aborted)
+      session.transcode('.', { 'mime_type' => 'text/html' }) do |out|
+        out.write(html[0, html.length / 2])
+        session.abort(1)
+        out.write(html[(html.length / 2)..-1])
+      end
+      assert aborted.string.length < full.string.length, '中断したのに完全な出力が返った'
+      session.reset
+
+      again = StringIO.new
+      again.binmode
+      session.set_output_as_stream(again)
+      transcode_string(session, '<p>after abort</p>')
+      assert_equal '%PDF', again.string[0, 4], '中断後のセッションで再変換できない'
+    end
+  end
+
+  # set_output_as_stream で結果がストリームに書かれる
+  def test_output_stream
+    buf = StringIO.new
+    buf.binmode
+    with_session do |session|
+      session.set_output_as_stream(buf)
+      open(CTIDriverTests.data_path('test.css'), 'rb') do |source|
+        session.resource('test.css') { |out| CTI.copy_stream(source, out) }
+      end
+      session.transcode do |out|
+        open(CTIDriverTests.data_path('test.html'), 'rb') { |source| CTI.copy_stream(source, out) }
+      end
+    end
+    assert_equal '%PDF', buf.string[0, 4]
+    assert buf.string.length > 100
+  end
+
+  # 連続モードで 2 文書を変換して join すると 1 つの PDF になる(1 文書より大きい)
+  def test_continuous_join
+    single = StringIO.new
+    single.binmode
+    with_session do |session|
+      session.set_output_as_stream(single)
+      transcode_string(session, '<p>doc 0</p>')
+    end
+    joined = StringIO.new
+    joined.binmode
+    with_session do |session|
+      session.set_output_as_stream(joined)
+      session.set_continuous(true)
+      2.times { |i| transcode_string(session, "<p>doc #{i}</p>") }
+      session.join
+    end
+    assert_equal '%PDF', joined.string[0, 4]
+    assert joined.string.length > single.string.length, '結合した出力が 1 文書より大きくない'
   end
 end
 end
