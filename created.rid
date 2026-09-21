@@ -1,11 +1,11 @@
-Fri, 11 Sep 2026 09:26:00 +0000
-src/code/CTI/Builder/FileBuilder.rb	Fri, 11 Sep 2026 09:25:57 +0000
-src/code/CTI/Builder/NullBuilder.rb	Fri, 11 Sep 2026 09:25:57 +0000
-src/code/CTI/Builder/StreamBuilder.rb	Fri, 11 Sep 2026 09:25:57 +0000
-src/code/CTI/CTIP2/CTIP2.rb	Fri, 11 Sep 2026 09:25:57 +0000
-src/code/CTI/CTIP2/Utils.rb	Fri, 11 Sep 2026 09:25:57 +0000
-src/code/CTI/Driver.rb	Fri, 11 Sep 2026 09:25:57 +0000
-src/code/CTI/Results/DirectoryResults.rb	Fri, 11 Sep 2026 09:25:57 +0000
-src/code/CTI/Results/SingleResult.rb	Fri, 11 Sep 2026 09:25:57 +0000
-src/code/CTI/Session.rb	Fri, 11 Sep 2026 09:25:57 +0000
-src/code/CTI.rb	Fri, 11 Sep 2026 09:25:57 +0000
+Mon, 21 Sep 2026 02:30:55 +0000
+src/code/CTI/Builder/FileBuilder.rb	Mon, 21 Sep 2026 02:30:52 +0000
+src/code/CTI/Builder/NullBuilder.rb	Mon, 21 Sep 2026 02:30:52 +0000
+src/code/CTI/Builder/StreamBuilder.rb	Mon, 21 Sep 2026 02:30:52 +0000
+src/code/CTI/CTIP2/CTIP2.rb	Mon, 21 Sep 2026 02:30:52 +0000
+src/code/CTI/CTIP2/Utils.rb	Mon, 21 Sep 2026 02:30:52 +0000
+src/code/CTI/Driver.rb	Mon, 21 Sep 2026 02:30:52 +0000
+src/code/CTI/Results/DirectoryResults.rb	Mon, 21 Sep 2026 02:30:52 +0000
+src/code/CTI/Results/SingleResult.rb	Mon, 21 Sep 2026 02:30:52 +0000
+src/code/CTI/Session.rb	Mon, 21 Sep 2026 02:30:52 +0000
+src/code/CTI.rb	Mon, 21 Sep 2026 02:30:52 +0000
